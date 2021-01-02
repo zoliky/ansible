@@ -5,7 +5,7 @@
 
 * About 
 
-I use Ansible to automate the installation and configuration of all the software on my computer.
+Ansible is a configuration management tool that I use to automate the installation and configuration of all the software on my computer.
 
 [[./static/linuxdesktop.jpg]]
 
