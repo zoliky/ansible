@@ -1,0 +1,7 @@
+- name: software | transmission
+  tags: packages,flatpak,transmission
+  become_user: zoliky
+  flatpak:
+    name: com.transmissionbt.Transmission
+    method: user
+    state: present

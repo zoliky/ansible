@@ -1,0 +1,7 @@
+- name: software | foliate
+  tags: packages,flatpak,foliate
+  become_user: zoliky
+  flatpak:
+    name: com.github.johnfactotum.Foliate
+    method: user
+    state: present

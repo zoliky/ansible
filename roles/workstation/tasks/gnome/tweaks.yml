@@ -1,0 +1,6 @@
+- name: display minimize, maximize, and close buttons
+  tags: gnome,buttons
+  become_user: zoliky
+  dconf:
+    key: "/org/gnome/desktop/wm/preferences/button-layout"
+    value: "'appmenu:minimize,maximize,close'"

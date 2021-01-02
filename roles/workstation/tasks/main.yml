@@ -1,0 +1,44 @@
+# Load distribution-specific variables
+- include_vars: "{{ ansible_distribution }}.yml"
+
+- block:
+  - include_tasks: system/repositories.yml
+  - include_tasks: system/utilities.yml
+  - include_tasks: system/codecs.yml
+  - include_tasks: system/zsh.yml
+
+## - include_tasks: system/fonts.yml
+
+  ## GNOME
+  - include_tasks: gnome/appearance.yml
+  - include_tasks: gnome/datetime.yml
+  - include_tasks: gnome/keyboard.yml
+    
+  ## Devel
+  - import_tasks: devel/java.yml
+## - import_tasks: devel/golang.yml
+  
+  ## Install software
+  - import_tasks: software/alacarte.yml
+  - import_tasks: software/audacity.yml
+  - import_tasks: software/calibre.yml
+  - import_tasks: software/chrome.yml
+  - import_tasks: software/darktable.yml
+  - import_tasks: software/easytag.yml
+  - import_tasks: software/filezilla.yml
+  - import_tasks: software/foliate.yml
+  - import_tasks: software/gimp.yml
+  - import_tasks: software/inkscape.yml
+  - import_tasks: software/kitty.yml
+  - import_tasks: software/libreoffice.yml
+  - import_tasks: software/lollypop.yml
+  - import_tasks: software/shortwave.yml
+  - import_tasks: software/skype.yml
+  - import_tasks: software/slack.yml
+  - import_tasks: software/telegram.yml
+  - import_tasks: software/thunderbird.yml
+  - import_tasks: software/transmission.yml
+  - import_tasks: software/vice.yml
+  - import_tasks: software/vlc.yml
+  - import_tasks: software/vscode.yml
+  - import_tasks: software/zoom.yml

@@ -1,0 +1,11 @@
+- name: software | emacs
+  package:
+    name: emacs
+    state: present
+  when: ansible_distribution == 'Fedora'
+
+- name: software | emacs | maildir-utils
+  package:
+    name: maildir-utils
+    state: present
+  when: ansible_distribution == 'Fedora'

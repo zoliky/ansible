@@ -1,0 +1,38 @@
+- name: system | zsh
+  package:
+    name: zsh
+    state: present
+  when: ansible_distribution == 'Fedora'
+
+- name: system | zsh | set zsh as default shell
+  user:
+    name: 'zoliky'
+    shell: /usr/bin/zsh
+  when: ansible_distribution == 'Fedora'
+
+- name: system | zsh | check if oh-my-zsh exists
+  stat:
+    path: /home/zoliky/.oh-my-zsh
+  register: oh_my_zsh_dir
+  
+- name: system | zsh | git clone oh-my-zsh
+  command: 'git clone -c core.autocrlf=input --depth=1 https://github.com/robbyrussell/oh-my-zsh.git /home/zoliky/.oh-my-zsh'
+  become: yes
+  become_user: zoliky
+  when: oh_my_zsh_dir.stat.exists == False
+
+- name: system | zsh | copy zshenv
+  tags: gnome,zsh
+  become_user: zoliky
+  copy:
+    src: dotfiles/zshenv
+    dest: /home/zoliky/.zshenv
+    mode: 0644
+
+- name: system | zsh | copy zshrc
+  tags: gnome,zsh
+  become_user: zoliky
+  copy:
+    src: dotfiles/zshrc
+    dest: /home/zoliky/.zshrc
+    mode: 0644

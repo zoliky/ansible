@@ -1,0 +1,4 @@
+- name: software | inkscape
+  package:
+    name: inkscape
+    state: present

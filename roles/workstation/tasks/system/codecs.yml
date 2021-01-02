@@ -1,0 +1,5 @@
+- name: system | codecs | install multimedia codecs
+  dnf:
+    name: '@multimedia'
+    state: present
+  when: ansible_distribution == 'Fedora'

@@ -1,0 +1,7 @@
+- name: software | skype
+  tags: packages,flatpak,skype
+  become_user: zoliky
+  flatpak:
+    name: com.skype.Client
+    method: user
+    state: present

@@ -1,0 +1,45 @@
+- name: system | fonts | create .fonts directory
+  become_user: zoliky
+  file:
+    path: /home/zoliky/.fonts
+    state: directory
+    mode: '0755'
+  
+- name: system | fonts | charis-sil
+  package:
+    name: sil-charis-fonts
+    state: present
+  when: ansible_distribution == 'Fedora'
+
+- name: system | fonts | cabextract for truetype
+  package:
+    name: cabextract
+    state: present
+  when: ansible_distribution == 'Fedora'
+
+- name: system | fonts | microsoft truetype fonts
+  tags: system,fonts,msttf
+  dnf:
+    disable_gpg_check: yes
+    name: https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+    state: present
+  when: ansible_distribution == 'Fedora'
+
+- name: system | fonts | download hack font
+  become_user: zoliky
+  get_url:
+    url: "https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip"
+    dest: /home/zoliky/Downloads
+    mode: '0755'
+
+- name: system | fonts | unpack hack font
+  become_user: zoliky
+  unarchive:
+    src: /home/zoliky/Downloads/Hack-v3.003-ttf.zip
+    dest: /home/zoliky/Downloads
+
+- name: system | fonts | copy hack font
+  become_user: zoliky
+  copy:
+    src: /home/zoliky/Downloads/ttf/
+    dest: /home/zoliky/.fonts

@@ -1,0 +1,7 @@
+- name: software | calibre | install package
+  tags: packages,flatpak,vlc
+  become_user: zoliky
+  flatpak:
+    name: com.calibre_ebook.calibre
+    method: user
+    state: present

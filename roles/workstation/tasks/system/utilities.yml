@@ -1,0 +1,11 @@
+- name: system | utilities | install utilities
+  package:
+    name:
+      - mpv
+      - vim
+      - fzf
+      - neovim
+      - meson
+      - gnome-tweaks
+      - "{{ python_psutil_package }}"
+    state: present

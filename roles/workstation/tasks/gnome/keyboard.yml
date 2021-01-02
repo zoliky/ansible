@@ -1,0 +1,6 @@
+- name: gnome | keyboard | map caps lock to ctrl
+  tags: gnome,keyboard
+  become_user: zoliky
+  dconf:
+    key: "/org/gnome/desktop/input-sources/xkb-options"
+    value: "['lv3:ralt_switch', 'caps:ctrl_modifier']"

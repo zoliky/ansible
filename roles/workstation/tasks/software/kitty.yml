@@ -1,0 +1,4 @@
+- name: software | kitty
+  package:
+    name: kitty
+    state: present

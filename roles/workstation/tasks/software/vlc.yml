@@ -1,0 +1,7 @@
+- name: software | vlc | install package
+  tags: packages,flatpak,vlc
+  become_user: zoliky
+  flatpak:
+    name: org.videolan.VLC
+    method: user
+    state: present

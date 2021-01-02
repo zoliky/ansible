@@ -1,0 +1,7 @@
+## rpmfusion?
+
+- name: software | vice
+  package:
+    name: vice-x64
+    state: present
+  when: ansible_distribution == 'Fedora'

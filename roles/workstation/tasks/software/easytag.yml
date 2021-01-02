@@ -1,0 +1,4 @@
+- name: software | easytag
+  package:
+    name: easytag
+    state: present

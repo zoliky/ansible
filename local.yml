@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tags: workstation
+  become: true
+  roles:
+    - workstation

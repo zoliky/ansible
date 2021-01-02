@@ -1,0 +1,24 @@
+- name: software | vscode | check if repository exists
+  stat:
+    path: /etc/yum.repos.d/vscode.repo
+  register: vscode_repo_file
+  when: ansible_distribution == 'Fedora'
+  
+- name: software | vscode | enable vscode repository
+  yum_repository:
+    file: vscode
+    name: code
+    enabled: yes
+    gpgcheck: yes
+    description: Visual Studio Code
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+  when:
+    - ansible_distribution == 'Fedora'
+    - vscode_repo_file.stat.exists == False
+
+- name: software | vscode | install vscode
+  package:
+    name: code
+    state: present
+  when: ansible_distribution == 'Fedora'

@@ -1,0 +1,24 @@
+- name: software | chrome | check if repository exists
+  stat:
+    path: /etc/yum.repos.d/google-chrome.repo
+  register: chrome_repo_file
+  when: ansible_distribution == 'Fedora'
+  
+- name: software | chrome | enable chrome repository
+  yum_repository:
+    file: google-chrome
+    name: google-chrome
+    enabled: yes
+    gpgcheck: yes
+    description: google-chrome
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+  when:
+    - ansible_distribution == 'Fedora'
+    - chrome_repo_file.stat.exists == False
+
+- name: software | chrome | install chrome
+  package:
+    name: google-chrome-stable
+    state: present
+  when: ansible_distribution == 'Fedora'

@@ -1,0 +1,7 @@
+- name: software | lollypop
+  tags: packages,flatpak,lollypop
+  become_user: zoliky
+  flatpak:
+    name: org.gnome.Lollypop
+    method: user
+    state: present

@@ -1,0 +1,7 @@
+- name: software | slack
+  tags: packages,flatpak,slack
+  become_user: zoliky
+  flatpak:
+    name: com.slack.Slack
+    method: user
+    state: present

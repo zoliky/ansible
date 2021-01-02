@@ -1,0 +1,7 @@
+- name: software | filezilla
+  tags: packages,flatpak,filezilla
+  become_user: zoliky
+  flatpak:
+    name: org.filezillaproject.Filezilla
+    method: user
+    state: present

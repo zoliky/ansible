@@ -1,0 +1,21 @@
+- name: gnome | appearance | copy wallpapers
+  tags: gnome,gnome-wallpaper
+  become_user: zoliky
+  copy:
+    src: wallpapers/
+    dest: /home/zoliky/Pictures/
+    mode: 0644
+
+- name: gnome | appearance | set wallpaper
+  tags: gnome,gnome-wallpaper
+  become_user: zoliky
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file:///home/zoliky/Pictures/0003.jpg'"
+
+- name: gnome | appearance | set wallpaper position
+  tags: gnome,gnome-wallpaper
+  become_user: zoliky
+  dconf:
+    key: "/org/gnome/desktop/background/picture-options"
+    value: "'zoom'"

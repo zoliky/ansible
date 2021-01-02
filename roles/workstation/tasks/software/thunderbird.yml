@@ -1,0 +1,4 @@
+- name: software | thunderbird
+  package:
+    name: thunderbird
+    state: present
