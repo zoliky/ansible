@@ -13,7 +13,7 @@ Ansible was developed by Red Hat Inc., which is now a subsidiary of IBM.
 
 * Installation
 
-Please don't directly use this against your own machines, as it is something I developed for myself and may not translate to your use-case.
+I developed this configuration for personal use so it may not work perfectly in your case. I recommend that you use it as a base when building your own configuration rather than installing it directly.
 
 #+begin_src shell
   $ sudo ansible-pull -U https://github.com/zoliky/ansible.git
