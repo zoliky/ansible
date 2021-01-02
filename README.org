@@ -14,5 +14,5 @@ I use Ansible to automate the installation and configuration of all the software
 Please don't directly use this against your own machines, as it is something I developed for myself and may not translate to your use-case.
 
 #+begin_src shell
-  $ sudo ansible-pull -U https://github.com/zoliky/ansiblews.git
+  $ sudo ansible-pull -U https://github.com/zoliky/ansible.git
 #+end_src
