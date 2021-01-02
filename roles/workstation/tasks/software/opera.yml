@@ -1,0 +1,7 @@
+- name: software | opera
+  tags: software,opera
+  dnf:
+##  disable_gpg_check: yes
+    name: https://download3.operacdn.com/pub/opera/desktop/73.0.3856.284/linux/opera-stable_73.0.3856.284_amd64.rpm
+    state: present
+  when: ansible_distribution == 'Fedora'
