@@ -32,6 +32,7 @@
   - import_tasks: software/kitty.yml
   - import_tasks: software/libreoffice.yml
   - import_tasks: software/lollypop.yml
+  - import_tasks: software/opera.yml
   - import_tasks: software/shortwave.yml
   - import_tasks: software/skype.yml
   - import_tasks: software/slack.yml
