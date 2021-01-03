@@ -1,5 +1,5 @@
-#+TITLE: Leslie King's Ansible Configuration
-#+AUTHOR: Leslie King
+#+TITLE: Zoltán Király's Ansible Configuration
+#+AUTHOR: Zoltán Király
 #+EMAIL: zoliky@gmail.com
 #+DATE: <2020-12-27 Sun>
 
