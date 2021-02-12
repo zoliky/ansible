@@ -1,0 +1,7 @@
+- name: software | signal
+  tags: packages,flatpak,signal
+  become_user: zoliky
+  flatpak:
+    name: org.signal.Signal
+    method: user
+    state: present
