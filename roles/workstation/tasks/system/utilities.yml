@@ -4,6 +4,7 @@
       - mpv
       - vim
       - fzf
+      - htop
       - neovim
       - meson
       - gnome-tweaks
