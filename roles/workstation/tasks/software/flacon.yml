@@ -1,0 +1,4 @@
+- name: software | flacon
+  package:
+    name: flacon
+    state: present
