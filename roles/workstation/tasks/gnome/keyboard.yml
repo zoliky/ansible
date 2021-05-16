@@ -1,3 +1,10 @@
+- name: gnome | keyboard | add input sources
+  tags: gnome,keyboard
+  become_user: zoliky
+  dconf:
+    key: "/org/gnome/desktop/input-sources/sources"
+    value: "[('xkb', 'us'), ('xkb', 'hu'), ('xkb', 'ro+std')]"
+
 - name: gnome | keyboard | map caps lock to ctrl
   tags: gnome,keyboard
   become_user: zoliky
