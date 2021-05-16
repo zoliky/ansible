@@ -7,6 +7,5 @@
       - htop
       - neovim
       - meson
-      - gnome-tweaks
       - "{{ python_psutil_package }}"
     state: present
