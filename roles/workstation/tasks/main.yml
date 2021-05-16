@@ -12,7 +12,9 @@
   ## GNOME
   - include_tasks: gnome/appearance.yml
   - include_tasks: gnome/datetime.yml
+  - include_tasks: gnome/display.yml
   - include_tasks: gnome/keyboard.yml
+  - include_tasks: gnome/tweaks.yml
     
   ## Devel
   - import_tasks: devel/java.yml
