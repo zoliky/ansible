@@ -1,5 +1,5 @@
-- name: display minimize, maximize, and close buttons
-  tags: gnome,buttons
+- name: gnome | tweaks | display minimize, maximize, and close buttons
+  tags: gnome,tweaks
   become_user: zoliky
   dconf:
     key: "/org/gnome/desktop/wm/preferences/button-layout"
