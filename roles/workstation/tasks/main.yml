@@ -48,5 +48,6 @@
   - import_tasks: software/transmission.yml
   - import_tasks: software/vice.yml
   - import_tasks: software/vlc.yml
+  - import_tasks: software/vokoscreen.yml
   - import_tasks: software/vscode.yml
   - import_tasks: software/zoom.yml
