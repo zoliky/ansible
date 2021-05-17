@@ -1,3 +1,10 @@
+- name: gnome | tweaks | disable hot corners
+  tags: gnome,tweaks
+  become_user: zoliky
+  dconf:
+    key: "/org/gnome/desktop/interface/enable-hot-corners"
+    value: "false"
+
 - name: gnome | tweaks | display minimize, maximize, and close buttons
   tags: gnome,tweaks
   become_user: zoliky
