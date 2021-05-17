@@ -1,0 +1,7 @@
+- name: software | teamviewer
+  tags: software,teamviewer
+  dnf:
+    disable_gpg_check: yes
+    name: https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+    state: present
+  when: ansible_distribution == 'Fedora'
