@@ -28,6 +28,7 @@
   - import_tasks: software/darktable.yml
   - import_tasks: software/easytag.yml
   - import_tasks: software/emacs.yml
+  - import_tasks: software/extensions.yml
   - import_tasks: software/filezilla.yml
   - import_tasks: software/flacon.yml
   - import_tasks: software/foliate.yml
