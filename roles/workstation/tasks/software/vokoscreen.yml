@@ -1,0 +1,4 @@
+- name: software | vokoscreen
+  package:
+    name: vokoscreenNG
+    state: present
