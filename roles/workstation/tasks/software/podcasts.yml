@@ -1,0 +1,7 @@
+- name: software | podcasts
+  tags: packages,flatpak,podcasts
+  become_user: zoliky
+  flatpak:
+    name: org.gnome.Podcasts
+    method: user
+    state: present
