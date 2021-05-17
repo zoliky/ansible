@@ -1,0 +1,7 @@
+- name: software | extensions
+  tags: packages,flatpak,extensions
+  become_user: zoliky
+  flatpak:
+    name: org.gnome.Extensions
+    method: user
+    state: present
