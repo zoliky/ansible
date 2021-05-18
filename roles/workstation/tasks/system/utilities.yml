@@ -5,7 +5,8 @@
       - vim
       - fzf
       - htop
-      - neovim
       - meson
+      - xinput
+      - neovim
       - "{{ python_psutil_package }}"
     state: present
