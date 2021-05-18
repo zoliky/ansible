@@ -51,4 +51,5 @@
   - import_tasks: software/vlc.yml
   - import_tasks: software/vokoscreen.yml
   - import_tasks: software/vscode.yml
+  - import_tasks: software/xournalpp.yml
   - import_tasks: software/zoom.yml
