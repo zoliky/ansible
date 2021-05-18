@@ -1,0 +1,7 @@
+- name: software | displaycal
+  tags: packages,flatpak,displaycal
+  become_user: zoliky
+  flatpak:
+    name: net.displaycal.DisplayCAL
+    method: user
+    state: present
