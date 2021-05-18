@@ -6,8 +6,8 @@
   - include_tasks: system/utilities.yml
   - include_tasks: system/codecs.yml
   - include_tasks: system/zsh.yml
-
-## - include_tasks: system/fonts.yml
+  - include_tasks: system/fonts.yml
+  - include_tasks: system/wacom.yml
 
   ## GNOME
   - include_tasks: gnome/appearance.yml
@@ -18,7 +18,6 @@
     
   ## Devel
   - import_tasks: devel/java.yml
-## - import_tasks: devel/golang.yml
   
   ## Install software
   - import_tasks: software/alacarte.yml
