@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=wacom
+GenericName=Wacom graphics tablet configuration
+Comment=Wacom graphics tablet configuration
+TryExec=/usr/local/bin/xorg-hotplug
+Exec=/usr/local/bin/xorg-hotplug

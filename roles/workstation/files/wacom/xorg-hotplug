@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Usage:
+# xorg-hotplug [device]
+#
+#   device  - Name of an Xorg device to configure.
+#
+# xorg-hotplug should be added to your window manager's list of startup programs. If
+# run with no arguments, it will sit in the background monitoring for hotplug events
+# by monitoring the Xorg log file. When a new device is connected, it will automatically
+# launch a new instance of itself with the name of the deivce to handle configuration.
+#
+# The bottom half of this script should be customized to change the list of devices that
+# it recognizes and the commands that get run in response.
+
+# If run without arguments, monitor for xorg hotplug events
+if [[ $# -eq 0 ]]; then
+    CMD=$(readlink -e "$0")
+    DPY=${DISPLAY#:}
+
+    [[ -f "$LOG" ]] || LOG=~/.local/share/xorg/Xorg.${DPY}.log
+    [[ -f "$LOG" ]] || LOG=/var/log/Xorg.${DPY}.log
+    [[ -f "$LOG" ]] || exit 1
+
+    AWKPROG=$(cat <<'EOF'
+/XINPUT: Adding extended input device/ {
+    DEVICE=$2
+    if (length(DEVICE) > 0) {
+        print "Hotplugging " DEVICE;
+        system("\""CMD"\" \""DEVICE"\"");
+    }
+}
+EOF
+)
+
+    echo "Monitoring for hotplug events from ${LOG}"
+    tail -f -n +1 "${LOG}" | awk -vFS=\" -vCMD="${CMD}" "${AWKPROG}"
+    exit 0
+fi
+
+# If run with arguments, set up the specified device
+DEVICE=$1
+
+echo "Configuring ${DEVICE}"
+case "${DEVICE}" in
+  "SynPS/2 Synaptics TouchPad")
+  # Disable touchpad
+  # xinput --disable $(xinput --list | grep -i 'touchpad' | grep -o 'id=[0-9]*' | sed 's/id=//')
+  ;;
+  
+  "Wacom Intuos S Pen stylus")
+  # Set the lower button to perform pan scrolling
+  xsetwacom --set "${DEVICE}" "Button" "2" "pan"
+
+  # The distance the pen must move (in table units) before a
+  # sroll event is generated when using the "pan" action
+  xsetwacom --set "${DEVICE}" "PanScrollThreshold" "200"
+  ;;
+  
+  "Wacom Intuos S Pad pad")
+  # Set button 1 to CTRL-z (Undo)
+  xsetwacom --set "${DEVICE}" "Button" "1" "key +Control_L +z -z"
+
+  # Set button 2 to CTRL-y (Redo)
+  xsetwacom --set "${DEVICE}" "Button" "2" "key +Control_L +y -y"
+
+  # Set button 3 to - (Zoom out)
+  xsetwacom --set "${DEVICE}" "Button" "3" "key +KP_Subtract -KP_Subtract"
+
+  # Set button 8 to + (Zoom in)
+  xsetwacom --set "${DEVICE}" "Button" "8" "key +KP_Add -KP_Add"
+  ;;
+esac
