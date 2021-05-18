@@ -1,0 +1,7 @@
+- name: software | xournalpp
+  tags: packages,flatpak,xournalpp
+  become_user: zoliky
+  flatpak:
+    name: com.github.xournalpp.xournalpp
+    method: user
+    state: present
