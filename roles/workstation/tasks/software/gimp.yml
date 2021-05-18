@@ -1,4 +1,7 @@
 - name: software | gimp
-  package:
-    name: gimp
+  tags: packages,flatpak,gimp
+  become_user: zoliky
+  flatpak:
+    name: org.gimp.GIMP
+    method: user
     state: present
