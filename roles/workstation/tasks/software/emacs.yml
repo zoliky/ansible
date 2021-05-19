@@ -9,3 +9,13 @@
     name: maildir-utils
     state: present
   when: ansible_distribution == 'Fedora'
+
+- name: software | emacs | hunspell
+  package:
+    name:
+      - hunspell
+      - hunspell-en-US
+      - hunspell-hu
+      - hunspell-ro
+    state: present
+  when: ansible_distribution == 'Fedora'
