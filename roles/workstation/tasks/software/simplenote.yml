@@ -1,0 +1,7 @@
+- name: software | simplenote
+  tags: packages,flatpak,simplenote
+  become_user: zoliky
+  flatpak:
+    name: com.simplenote.Simplenote
+    method: user
+    state: present
