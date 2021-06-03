@@ -1,0 +1,7 @@
+- name: software | xnviewmp
+  tags: packages,flatpak,xnviewmp
+  become_user: zoliky
+  flatpak:
+    name: com.xnview.XnViewMP
+    method: user
+    state: present
