@@ -26,7 +26,6 @@
   - import_tasks: software/calibre.yml
   - import_tasks: software/chrome.yml
   - import_tasks: software/darktable.yml
-  - import_tasks: software/easytag.yml
   - import_tasks: software/emacs.yml
   - import_tasks: software/extensions.yml
   - import_tasks: software/filezilla.yml
