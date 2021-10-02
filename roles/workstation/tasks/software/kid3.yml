@@ -1,0 +1,4 @@
+- name: software | kid3
+  package:
+    name: kid3-qt
+    state: present
