@@ -1,0 +1,7 @@
+- name: software | nicotine
+  tags: packages,flatpak,nicotine
+  become_user: zoliky
+  flatpak:
+    name: org.nicotine_plus.Nicotine
+    method: user
+    state: present
