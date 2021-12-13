@@ -11,7 +11,7 @@
   become_user: zoliky
   dconf:
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file:///home/zoliky/Pictures/0003.jpg'"
+    value: "'file:///home/zoliky/Pictures/0004.jpg'"
 
 - name: gnome | appearance | set wallpaper position
   tags: gnome,gnome-wallpaper
