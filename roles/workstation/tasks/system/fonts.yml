@@ -21,7 +21,7 @@
   tags: system,fonts,msttf
   dnf:
     disable_gpg_check: yes
-    name: https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+    name: https://rpmfind.net/linux/sourceforge/m/ms/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     state: present
   when: ansible_distribution == 'Fedora'
 
