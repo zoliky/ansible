@@ -1,4 +1,0 @@
-- name: software | kdenlive
-  package:
-    name: kdenlive
-    state: present
