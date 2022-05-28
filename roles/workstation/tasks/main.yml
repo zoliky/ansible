@@ -44,7 +44,6 @@
   - import_tasks: software/picard.yml
   - import_tasks: software/podcasts.yml
   - import_tasks: software/shortwave.yml
-  - import_tasks: software/signal.yml
   - import_tasks: software/simplenote.yml
   - import_tasks: software/skype.yml
   - import_tasks: software/slack.yml
