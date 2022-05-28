@@ -1,4 +1,0 @@
-- name: software | picard
-  package:
-    name: picard
-    state: present
