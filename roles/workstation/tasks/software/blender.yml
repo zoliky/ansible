@@ -1,4 +1,0 @@
-- name: software | blender
-  package:
-    name: blender
-    state: present
