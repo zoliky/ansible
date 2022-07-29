@@ -1,8 +1,0 @@
-- name: software | libreoffice | install package
-  tags: packages,flatpak,libreoffice
-  become_user: zoliky
-  flatpak:
-    name: org.libreoffice.LibreOffice
-    method: user
-    state: present
-  when: ansible_distribution != 'Fedora'
