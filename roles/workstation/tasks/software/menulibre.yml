@@ -1,0 +1,4 @@
+- name: software | menulibre
+  package:
+    name: menulibre
+    state: present
