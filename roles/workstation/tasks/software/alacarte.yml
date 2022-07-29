@@ -1,4 +1,0 @@
-- name: software | alacarte
-  package:
-    name: alacarte
-    state: present
