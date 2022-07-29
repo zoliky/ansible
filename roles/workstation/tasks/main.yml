@@ -17,7 +17,6 @@
   - include_tasks: gnome/tweaks.yml
   
   ## Install software
-  - import_tasks: software/alacarte.yml
   - import_tasks: software/audacity.yml
   - import_tasks: software/bitwarden.yml
   - import_tasks: software/calibre.yml
