@@ -4,9 +4,11 @@
     state: present
   when: ansible_distribution == 'Fedora'
 
-- name: software | emacs | maildir-utils
+- name: software | emacs | mu4e
   package:
-    name: maildir-utils
+    name:
+      - maildir-utils
+      - isync
     state: present
   when: ansible_distribution == 'Fedora'
 
