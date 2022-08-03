@@ -1,0 +1,11 @@
+- name: software | latex
+  package:
+    name:
+      - texlive-scheme-basic
+      - texlive-awesomebox
+      - tex-wrapfig
+      - tex-ulem
+      - tex-capt-of
+      - tex-nopageno
+    state: present
+  when: ansible_distribution == 'Fedora'
