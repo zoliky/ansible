@@ -23,8 +23,6 @@ DEFAULT_USER=$USER
 setopt noflowcontrol
 
 # Aliases
-alias nv="nvim"
-alias emacs="emacs -mm" # Start Emacs maximized
 type dfc > /dev/null && alias df="dfc"
 type htop > /dev/null && alias top="htop"
 
