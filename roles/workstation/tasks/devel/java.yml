@@ -1,4 +1,0 @@
-- name: devel | java
-  package:
-    name: "{{ java_package }}"
-    state: present
