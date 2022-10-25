@@ -4,4 +4,3 @@ rpmfusion_nonfree_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&
 rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-36.noarch.rpm"
 
 python_psutil_package: python3-psutil
-java_package: java-11-openjdk-devel
