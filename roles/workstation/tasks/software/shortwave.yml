@@ -1,7 +1,0 @@
-- name: software | shortwave
-  tags: packages,flatpak,shortwave
-  become_user: zoliky
-  flatpak:
-    name: de.haeckerfelix.Shortwave
-    method: user
-    state: present
