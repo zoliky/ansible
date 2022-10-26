@@ -38,7 +38,6 @@
   - import_tasks: software/menulibre.yml
   - import_tasks: software/opera.yml
   - import_tasks: software/podcasts.yml
-  - import_tasks: software/shortwave.yml
   - import_tasks: software/simplenote.yml
   - import_tasks: software/skype.yml
   - import_tasks: software/slack.yml
