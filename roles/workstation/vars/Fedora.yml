@@ -1,6 +1,6 @@
 rpmfusion_free_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020"
-rpmfusion_free_repository: "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-36.noarch.rpm"
+rpmfusion_free_repository: "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm"
 rpmfusion_nonfree_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
-rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-36.noarch.rpm"
+rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-37.noarch.rpm"
 
 python_psutil_package: python3-psutil
