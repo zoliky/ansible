@@ -3,6 +3,7 @@
     name:
       - texlive-scheme-basic
       - texlive-awesomebox
+      - texlive-microtype
       - tex-wrapfig
       - tex-ulem
       - tex-capt-of
