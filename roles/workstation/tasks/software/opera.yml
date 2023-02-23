@@ -2,6 +2,6 @@
   tags: software,opera
   dnf:
     disable_gpg_check: yes
-    name: https://download3.operacdn.com/pub/opera/desktop/95.0.4635.37/linux/opera-stable_95.0.4635.37_amd64.rpm
+    name: https://download3.operacdn.com/pub/opera/desktop/96.0.4693.20/linux/opera-stable_96.0.4693.20_amd64.rpm
     state: present
   when: ansible_distribution == 'Fedora'
