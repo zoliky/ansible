@@ -4,6 +4,7 @@
       - mpv
       - vim
       - fzf
+      - dfc
       - htop
       - meson
       - neovim
