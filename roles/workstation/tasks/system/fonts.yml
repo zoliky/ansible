@@ -4,7 +4,13 @@
     path: /home/zoliky/.fonts
     state: directory
     mode: '0755'
-  
+
+- name: system | fonts | hack
+  package:
+    name: source-foundry-hack-fonts
+    state: present
+  when: ansible_distribution == 'Fedora'
+
 - name: system | fonts | charis-sil
   package:
     name: sil-charis-fonts
@@ -24,22 +30,3 @@
     name: https://rpmfind.net/linux/sourceforge/m/ms/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     state: present
   when: ansible_distribution == 'Fedora'
-
-- name: system | fonts | download hack font
-  become_user: zoliky
-  get_url:
-    url: "https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip"
-    dest: /home/zoliky/Downloads
-    mode: '0755'
-
-- name: system | fonts | unpack hack font
-  become_user: zoliky
-  unarchive:
-    src: /home/zoliky/Downloads/Hack-v3.003-ttf.zip
-    dest: /home/zoliky/Downloads
-
-- name: system | fonts | copy hack font
-  become_user: zoliky
-  copy:
-    src: /home/zoliky/Downloads/ttf/
-    dest: /home/zoliky/.fonts
