@@ -40,7 +40,6 @@
   - import_tasks: software/podcasts.yml
   - import_tasks: software/simplenote.yml
   - import_tasks: software/skype.yml
-  - import_tasks: software/slack.yml
   - import_tasks: software/teamviewer.yml
   - import_tasks: software/telegram.yml
   - import_tasks: software/thunderbird.yml
