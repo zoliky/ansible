@@ -1,12 +1,8 @@
 - name: software | latex
   package:
     name:
-      - texlive-scheme-basic
-      - texlive-awesomebox
-      - texlive-microtype
-      - tex-wrapfig
-      - tex-ulem
-      - tex-capt-of
-      - tex-nopageno
+      - texlive-scheme-small
+      - texlive-capt-of
+      - texlive-nopageno
     state: present
   when: ansible_distribution == 'Fedora'
