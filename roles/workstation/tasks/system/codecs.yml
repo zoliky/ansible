@@ -1,5 +1,6 @@
 - name: system | codecs | install multimedia codecs
   dnf:
     name: '@multimedia'
+    allowerasing: true
     state: present
   when: ansible_distribution == 'Fedora'
