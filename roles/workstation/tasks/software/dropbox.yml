@@ -1,0 +1,4 @@
+- name: software | dropbox
+  package:
+    name: nautilus-dropbox
+    state: present
