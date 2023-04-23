@@ -24,6 +24,7 @@
   - import_tasks: software/darktable.yml
   - import_tasks: software/deadbeef.yml
   - import_tasks: software/displaycal.yml
+  - import_tasks: software/dropbox.yml
   - import_tasks: software/emacs.yml
   - import_tasks: software/extensions.yml
   - import_tasks: software/filezilla.yml
