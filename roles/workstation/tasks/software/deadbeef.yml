@@ -1,4 +1,4 @@
-- name: software | deadbeef
-  package:
+- name: Software | DeaDBeeF
+  ansible.builtin.package:
     name: deadbeef
     state: present

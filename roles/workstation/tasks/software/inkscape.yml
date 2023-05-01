@@ -1,4 +1,4 @@
-- name: software | inkscape
-  package:
+- name: Software | Inkscape
+  ansible.builtin.package:
     name: inkscape
     state: present

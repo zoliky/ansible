@@ -1,18 +1,18 @@
-- name: system | wacom | copy xorg-hotplug
-  copy:
+- name: System | Wacom | Copy xorg-hotplug
+  ansible.builtin.copy:
     src: wacom/xorg-hotplug
     dest: /usr/local/bin/
     mode: 0755
 
-- name: system | wacom | create autostart directory
+- name: System | Wacom | Create autostart directory
   become_user: zoliky
-  file:
+  ansible.builtin.file:
     path: /home/zoliky/.config/autostart
     state: directory
     mode: 0755
 
-- name: system | wacom | copy wacom.desktop
-  copy:
+- name: System | Wacom | Copy wacom.desktop
+  ansible.builtin.copy:
     src: wacom/wacom.desktop
     dest: /home/zoliky/.config/autostart/
     mode: 0644

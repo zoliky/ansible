@@ -1,13 +1,13 @@
-- name: gnome | tweaks | disable hot corners
+- name: GNOME | Tweaks | Disable hot corners
   tags: gnome,tweaks
   become_user: zoliky
-  dconf:
+  community.general.dconf:
     key: "/org/gnome/desktop/interface/enable-hot-corners"
     value: "false"
 
-- name: gnome | tweaks | display minimize, maximize, and close buttons
+- name: GNOME | Tweaks | Enable all window buttons
   tags: gnome,tweaks
   become_user: zoliky
-  dconf:
+  community.general.dconf:
     key: "/org/gnome/desktop/wm/preferences/button-layout"
     value: "'appmenu:minimize,maximize,close'"

@@ -1,36 +1,36 @@
-- name: system | repositories | add flathub remote
+- name: System | Repositories | Add Flathub remote
   tags: system,repository,flatpak
   become_user: zoliky
-  flatpak_remote:
+  community.general.flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
     state: present
     method: user
 
-- name: system | repositories | add rpmfusion free gpg key
+- name: System | Repositories | Add RPM Fusion free GPG key
   tags: system,repository,rpmfusion
-  rpm_key:
+  ansible.builtin.rpm_key:
     key: "{{ rpmfusion_free_gpg_key }}"
     state: present
   when: ansible_distribution == 'Fedora'
 
-- name: system | repositories | add rpmfusion free
+- name: System | Repositories | Add RPM Fusion free
   tags: system,repository,rpmfusion
-  dnf:
+  ansible.builtin.dnf:
     name: "{{ rpmfusion_free_repository }}"
     state: present
   when: ansible_distribution == 'Fedora'
 
-- name: system | repositories | add rpmfusion non-free gpg key
+- name: System | Repositories | Add RPM Fusion non-free GPG key
   tags: system,repository,rpmfusion
-  rpm_key:
+  ansible.builtin.rpm_key:
     key: "{{ rpmfusion_nonfree_gpg_key }}"
     state: present
   when: ansible_distribution == 'Fedora'
 
-- name: system | repositories | add rpmfusion non-free free
+- name: System | Repositories | Add RPM Fusion non-free
   tags: system,repository,rpmfusion
-  dnf:
+  ansible.builtin.dnf:
     name: "{{ rpmfusion_nonfree_repository }}"
     state: present
   when: ansible_distribution == 'Fedora'

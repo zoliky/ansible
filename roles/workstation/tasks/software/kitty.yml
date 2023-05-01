@@ -1,4 +1,4 @@
-- name: software | kitty
-  package:
+- name: Software | Kitty
+  ansible.builtin.package:
     name: kitty
     state: present

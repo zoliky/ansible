@@ -1,5 +1,5 @@
-- name: system | utilities | install utilities
-  package:
+- name: System | Utilities | Install utilities
+  ansible.builtin.package:
     name:
       - mpv
       - vim

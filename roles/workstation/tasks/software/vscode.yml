@@ -1,16 +1,16 @@
-- name: software | vscode | enable vscode repository
-  yum_repository:
+- name: Software | VSCode | Add VSCode repository
+  ansible.builtin.yum_repository:
     file: vscode
     name: code
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     description: Visual Studio Code
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     baseurl: https://packages.microsoft.com/yumrepos/vscode
   when: ansible_distribution == 'Fedora'
 
-- name: software | vscode | install vscode
-  package:
+- name: Software | VSCode | Install VSCode
+  ansible.builtin.package:
     name: code
     state: present
   when: ansible_distribution == 'Fedora'

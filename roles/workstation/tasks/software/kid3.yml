@@ -1,4 +1,4 @@
-- name: software | kid3
-  package:
+- name: Software | Kid3
+  ansible.builtin.package:
     name: kid3-qt
     state: present

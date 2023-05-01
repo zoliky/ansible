@@ -1,5 +1,5 @@
-- name: software | latex
-  package:
+- name: Software | LaTeX
+  ansible.builtin.package:
     name:
       - texlive-scheme-small
       - texlive-capt-of

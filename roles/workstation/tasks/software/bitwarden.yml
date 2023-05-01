@@ -1,7 +1,7 @@
-- name: software | bitwarden
-  tags: packages,flatpak,bitwarden
+- name: Software | Bitwarden
+  tags: software,flatpak,bitwarden
   become_user: zoliky
-  flatpak:
+  community.general.flatpak:
     name: com.bitwarden.desktop
     method: user
     state: present

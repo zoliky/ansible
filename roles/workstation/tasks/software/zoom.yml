@@ -1,7 +1,7 @@
-- name: software | zoom
-  tags: packages,flatpak,zoom
+- name: Software | Zoom
+  tags: software,flatpak,zoom
   become_user: zoliky
-  flatpak:
+  community.general.flatpak:
     name: us.zoom.Zoom
     method: user
     state: present

@@ -1,4 +1,4 @@
-- name: software | vokoscreen
-  package:
+- name: Software | Vokoscreen
+  ansible.builtin.package:
     name: vokoscreenNG
     state: present

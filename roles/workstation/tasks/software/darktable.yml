@@ -1,7 +1,7 @@
-- name: software | darktable
-  tags: packages,flatpak,darktable
+- name: Software | Darktable
+  tags: software,flatpak,darktable
   become_user: zoliky
-  flatpak:
+  community.general.flatpak:
     name: org.darktable.Darktable
     method: user
     state: present

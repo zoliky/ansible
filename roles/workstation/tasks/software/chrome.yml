@@ -1,16 +1,16 @@
-- name: software | chrome | enable chrome repository
-  yum_repository:
+- name: Software | Chrome | Add Chrome repository
+  ansible.builtin.yum_repository:
     file: google-chrome
     name: google-chrome
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     description: google-chrome
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
     baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
   when: ansible_distribution == 'Fedora'
 
-- name: software | chrome | install chrome
-  package:
+- name: Software | Chrome | Install Chrome
+  ansible.builtin.package:
     name: google-chrome-stable
     state: present
   when: ansible_distribution == 'Fedora'

@@ -1,7 +1,7 @@
-- name: software | audacity
-  tags: packages,flatpak,audacity
+- name: Software | Audacity
+  tags: software,flatpak,audacity
   become_user: zoliky
-  flatpak:
+  community.general.flatpak:
     name: org.audacityteam.Audacity
     method: user
     state: present

@@ -1,21 +1,21 @@
-- name: gnome | appearance | copy wallpapers
-  tags: gnome,gnome-wallpaper
+- name: GNOME | Appearance | Copy wallpapers
+  tags: gnome,appearance,wallpaper
   become_user: zoliky
-  copy:
+  ansible.builtin.copy:
     src: wallpapers/
     dest: /home/zoliky/Pictures/
     mode: 0644
 
-- name: gnome | appearance | set wallpaper
-  tags: gnome,gnome-wallpaper
+- name: GNOME | Appearance | Set wallpaper
+  tags: gnome,appearance,wallpaper
   become_user: zoliky
-  dconf:
+  community.general.dconf:
     key: "/org/gnome/desktop/background/picture-uri"
     value: "'file:///home/zoliky/Pictures/0004.jpg'"
 
-- name: gnome | appearance | set wallpaper position
-  tags: gnome,gnome-wallpaper
+- name: GNOME | Appearance | Set wallpaper position
+  tags: gnome,appearance,wallpaper
   become_user: zoliky
-  dconf:
+  community.general.dconf:
     key: "/org/gnome/desktop/background/picture-options"
     value: "'zoom'"

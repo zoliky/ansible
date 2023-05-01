@@ -1,7 +1,7 @@
-- name: software | telegram
-  tags: packages,flatpak,telegram
+- name: Software | Telegram
+  tags: software,flatpak,telegram
   become_user: zoliky
-  flatpak:
+  community.general.flatpak:
     name: org.telegram.desktop
     method: user
     state: present

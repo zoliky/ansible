@@ -1,19 +1,19 @@
-- name: software | emacs
-  package:
+- name: Software | Emacs
+  ansible.builtin.package:
     name: emacs
     state: present
   when: ansible_distribution == 'Fedora'
 
-- name: software | emacs | mu4e
-  package:
+- name: Software | Emacs | Install maildir-utils and isync
+  ansible.builtin.package:
     name:
       - maildir-utils
       - isync
     state: present
   when: ansible_distribution == 'Fedora'
 
-- name: software | emacs | hunspell
-  package:
+- name: Software | Emacs | Install hunspell
+  ansible.builtin.package:
     name:
       - hunspell
       - hunspell-en-US

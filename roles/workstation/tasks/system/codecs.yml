@@ -1,5 +1,5 @@
-- name: system | codecs | install multimedia codecs
-  dnf:
+- name: System | Codecs | Install multimedia codecs
+  ansible.builtin.dnf:
     name: '@multimedia'
     allowerasing: true
     state: present

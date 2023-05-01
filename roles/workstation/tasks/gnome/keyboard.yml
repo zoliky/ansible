@@ -1,13 +1,13 @@
-- name: gnome | keyboard | add input sources
+- name: GNOME | Keyboard | Add input sources
   tags: gnome,keyboard
   become_user: zoliky
-  dconf:
+  community.general.dconf:
     key: "/org/gnome/desktop/input-sources/sources"
     value: "[('xkb', 'us'), ('xkb', 'hu'), ('xkb', 'ro+std')]"
 
-- name: gnome | keyboard | map caps lock to ctrl
+- name: GNOME | Keyboard | Remap Caps Lock to CTRL
   tags: gnome,keyboard
   become_user: zoliky
-  dconf:
+  community.general.dconf:
     key: "/org/gnome/desktop/input-sources/xkb-options"
     value: "['lv3:ralt_switch', 'caps:ctrl_modifier']"

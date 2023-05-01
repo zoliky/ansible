@@ -1,7 +1,7 @@
-- name: software | transmission
-  tags: packages,flatpak,transmission
+- name: Software | Transmission
+  tags: software,flatpak,transmission
   become_user: zoliky
-  flatpak:
+  community.general.flatpak:
     name: com.transmissionbt.Transmission
     method: user
     state: present
