@@ -7,30 +7,22 @@
     state: present
     method: user
 
-- name: System | Repositories | Add RPM Fusion free GPG key
+- name: System | Repositories | Add RPM Fusion GPG keys
   tags: system,repository,rpmfusion
   ansible.builtin.rpm_key:
-    key: "{{ rpmfusion_free_gpg_key }}"
+    key: "{{ item }}"
     state: present
+  loop:
+    - "{{ rpmfusion_free_gpg_key }}"
+    - "{{ rpmfusion_nonfree_gpg_key }}"
   when: ansible_distribution == 'Fedora'
 
-- name: System | Repositories | Add RPM Fusion free
+- name: System | Repositories | Add RPM Fusion repositories
   tags: system,repository,rpmfusion
   ansible.builtin.dnf:
-    name: "{{ rpmfusion_free_repository }}"
+    name: "{{ item }}"
     state: present
-  when: ansible_distribution == 'Fedora'
-
-- name: System | Repositories | Add RPM Fusion non-free GPG key
-  tags: system,repository,rpmfusion
-  ansible.builtin.rpm_key:
-    key: "{{ rpmfusion_nonfree_gpg_key }}"
-    state: present
-  when: ansible_distribution == 'Fedora'
-
-- name: System | Repositories | Add RPM Fusion non-free
-  tags: system,repository,rpmfusion
-  ansible.builtin.dnf:
-    name: "{{ rpmfusion_nonfree_repository }}"
-    state: present
+  loop:
+    - "{{ rpmfusion_free_repository }}"
+    - "{{ rpmfusion_nonfree_repository }}"
   when: ansible_distribution == 'Fedora'
