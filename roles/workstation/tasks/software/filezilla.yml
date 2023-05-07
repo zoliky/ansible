@@ -1,6 +1,5 @@
 - name: Software | FileZilla
   tags: software,flatpak,filezilla
-  become_user: zoliky
   community.general.flatpak:
     name: org.filezillaproject.Filezilla
     method: user

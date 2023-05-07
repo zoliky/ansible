@@ -1,6 +1,5 @@
 - name: Software | Calibre
   tags: software,flatpak,calibre
-  become_user: zoliky
   community.general.flatpak:
     name: com.calibre_ebook.calibre
     method: user

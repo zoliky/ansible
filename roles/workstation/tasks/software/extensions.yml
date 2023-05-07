@@ -1,6 +1,5 @@
 - name: Software | Extensions
   tags: software,flatpak,extensions
-  become_user: zoliky
   community.general.flatpak:
     name: org.gnome.Extensions
     method: user

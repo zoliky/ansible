@@ -1,4 +1,5 @@
 - name: Software | Inkscape
+  become: true
   ansible.builtin.package:
     name: inkscape
     state: present

@@ -1,10 +1,12 @@
 - name: System | Zsh
+  become: true
   ansible.builtin.package:
     name: zsh
     state: present
   when: ansible_distribution == 'Fedora'
 
 - name: System | Zsh | Set zsh as default shell
+  become: true
   ansible.builtin.user:
     name: 'zoliky'
     shell: /usr/bin/zsh
@@ -17,8 +19,6 @@
 
 - name: System | Zsh | Git clone oh-my-zsh
   ansible.builtin.command: 'git clone -c core.autocrlf=input --depth=1 https://github.com/robbyrussell/oh-my-zsh.git /home/zoliky/.oh-my-zsh'
-  become: true
-  become_user: zoliky
   when: not oh_my_zsh_dir.stat.exists
 
 - name: System | Zsh | Copy zshenv

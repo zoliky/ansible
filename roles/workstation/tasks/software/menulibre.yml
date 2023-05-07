@@ -1,4 +1,5 @@
 - name: Software | MenuLibre
+  become: true
   ansible.builtin.package:
     name: menulibre
     state: present

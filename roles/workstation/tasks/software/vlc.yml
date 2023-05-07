@@ -1,6 +1,5 @@
 - name: Software | VLC
   tags: software,flatpak,vlc
-  become_user: zoliky
   community.general.flatpak:
     name: org.videolan.VLC
     method: user

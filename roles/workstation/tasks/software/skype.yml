@@ -1,6 +1,5 @@
 - name: Software | Skype
   tags: software,flatpak,skype
-  become_user: zoliky
   community.general.flatpak:
     name: com.skype.Client
     method: user

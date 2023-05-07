@@ -1,6 +1,5 @@
 - name: Software | Simplenote
   tags: software,flatpak,simplenote
-  become_user: zoliky
   community.general.flatpak:
     name: com.simplenote.Simplenote
     method: user

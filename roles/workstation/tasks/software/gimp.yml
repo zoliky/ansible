@@ -1,4 +1,5 @@
 - name: Software | GIMP
+  become: true
   ansible.builtin.package:
     name: gimp
     state: present

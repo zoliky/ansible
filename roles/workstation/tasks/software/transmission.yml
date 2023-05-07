@@ -1,6 +1,5 @@
 - name: Software | Transmission
   tags: software,flatpak,transmission
-  become_user: zoliky
   community.general.flatpak:
     name: com.transmissionbt.Transmission
     method: user

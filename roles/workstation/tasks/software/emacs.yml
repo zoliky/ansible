@@ -1,10 +1,12 @@
 - name: Software | Emacs
+  become: true
   ansible.builtin.package:
     name: emacs
     state: present
   when: ansible_distribution == 'Fedora'
 
 - name: Software | Emacs | Install maildir-utils and isync
+  become: true
   ansible.builtin.package:
     name:
       - maildir-utils
@@ -13,6 +15,7 @@
   when: ansible_distribution == 'Fedora'
 
 - name: Software | Emacs | Install hunspell
+  become: true
   ansible.builtin.package:
     name:
       - hunspell

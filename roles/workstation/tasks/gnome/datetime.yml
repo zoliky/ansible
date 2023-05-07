@@ -1,6 +1,5 @@
 - name: GNOME | Datetime | Change clock format
   tags: gnome,datetime
-  become_user: zoliky
   community.general.dconf:
     key: "/org/gnome/desktop/interface/clock-format"
     value: "'12h'"

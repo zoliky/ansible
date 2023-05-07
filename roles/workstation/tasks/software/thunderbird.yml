@@ -1,4 +1,5 @@
 - name: Software | Thunderbird
+  become: true
   ansible.builtin.package:
     name: thunderbird
     state: present

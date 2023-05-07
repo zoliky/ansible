@@ -1,4 +1,5 @@
 - name: Software | LaTeX
+  become: true
   ansible.builtin.package:
     name:
       - texlive-scheme-small

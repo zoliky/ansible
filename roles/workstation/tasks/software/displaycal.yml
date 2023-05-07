@@ -1,6 +1,5 @@
 - name: Software | DisplayCAL
   tags: software,flatpak,displaycal
-  become_user: zoliky
   community.general.flatpak:
     name: net.displaycal.DisplayCAL
     method: user

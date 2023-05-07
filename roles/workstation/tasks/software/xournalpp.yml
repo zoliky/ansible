@@ -1,6 +1,5 @@
 - name: Software | Xournalpp
   tags: software,flatpak,xournalpp
-  become_user: zoliky
   community.general.flatpak:
     name: com.github.xournalpp.xournalpp
     method: user

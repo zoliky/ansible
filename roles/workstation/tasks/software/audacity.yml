@@ -1,6 +1,5 @@
 - name: Software | Audacity
   tags: software,flatpak,audacity
-  become_user: zoliky
   community.general.flatpak:
     name: org.audacityteam.Audacity
     method: user

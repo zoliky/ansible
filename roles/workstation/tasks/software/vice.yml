@@ -1,4 +1,5 @@
 - name: Software | VICE
+  become: true
   ansible.builtin.package:
     name: vice-x64
     state: present

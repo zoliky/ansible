@@ -1,4 +1,5 @@
 - name: Software | Kid3
+  become: true
   ansible.builtin.package:
     name: kid3-qt
     state: present

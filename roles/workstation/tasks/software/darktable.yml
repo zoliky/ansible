@@ -1,6 +1,5 @@
 - name: Software | Darktable
   tags: software,flatpak,darktable
-  become_user: zoliky
   community.general.flatpak:
     name: org.darktable.Darktable
     method: user

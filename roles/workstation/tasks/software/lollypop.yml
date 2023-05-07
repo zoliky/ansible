@@ -1,6 +1,5 @@
 - name: Software | Lollypop
   tags: software,flatpak,lollypop
-  become_user: zoliky
   community.general.flatpak:
     name: org.gnome.Lollypop
     method: user

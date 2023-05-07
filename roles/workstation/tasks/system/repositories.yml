@@ -1,6 +1,5 @@
 - name: System | Repositories | Add Flathub remote
   tags: system,repository,flatpak
-  become_user: zoliky
   community.general.flatpak_remote:
     name: flathub
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
@@ -9,6 +8,7 @@
 
 - name: System | Repositories | Add RPM Fusion GPG keys
   tags: system,repository,rpmfusion
+  become: true
   ansible.builtin.rpm_key:
     key: "{{ item }}"
     state: present
@@ -19,6 +19,7 @@
 
 - name: System | Repositories | Add RPM Fusion repositories
   tags: system,repository,rpmfusion
+  become: true
   ansible.builtin.dnf:
     name: "{{ item }}"
     state: present

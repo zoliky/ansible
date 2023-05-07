@@ -1,4 +1,5 @@
 - name: Software | TeamViewer
+  become: true
   ansible.builtin.dnf:
     disable_gpg_check: true
     name: https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm

@@ -1,29 +1,32 @@
 - name: System | Fonts | Create .fonts directory
-  become_user: zoliky
   ansible.builtin.file:
     path: /home/zoliky/.fonts
     state: directory
     mode: '0755'
 
 - name: System | Fonts | Install Hack fonts
+  become: true
   ansible.builtin.package:
     name: source-foundry-hack-fonts
     state: present
   when: ansible_distribution == 'Fedora'
 
 - name: System | Fonts | Install Charis SIL fonts
+  become: true
   ansible.builtin.package:
     name: sil-charis-fonts
     state: present
   when: ansible_distribution == 'Fedora'
 
 - name: System | Fonts | Cabextract for TrueType
+  become: true
   ansible.builtin.package:
     name: cabextract
     state: present
   when: ansible_distribution == 'Fedora'
 
 - name: System | Fonts | Install Microsoft TrueType fonts
+  become: true
   ansible.builtin.dnf:
     disable_gpg_check: true
     name: https://rpmfind.net/linux/sourceforge/m/ms/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm

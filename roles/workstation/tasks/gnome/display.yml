@@ -1,13 +1,11 @@
 - name: GNOME | Display | Enable Night Light
   tags: gnome,display
-  become_user: zoliky
   community.general.dconf:
     key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
     value: "true"
 
 - name: GNOME | Display | Set Night Light color temperature
   tags: gnome,display
-  become_user: zoliky
   community.general.dconf:
     key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature"
     value: "uint32 5500"

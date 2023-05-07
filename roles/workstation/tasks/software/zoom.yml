@@ -1,6 +1,5 @@
 - name: Software | Zoom
   tags: software,flatpak,zoom
-  become_user: zoliky
   community.general.flatpak:
     name: us.zoom.Zoom
     method: user

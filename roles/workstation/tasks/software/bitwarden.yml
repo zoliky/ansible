@@ -1,6 +1,5 @@
 - name: Software | Bitwarden
   tags: software,flatpak,bitwarden
-  become_user: zoliky
   community.general.flatpak:
     name: com.bitwarden.desktop
     method: user

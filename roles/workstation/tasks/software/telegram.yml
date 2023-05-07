@@ -1,6 +1,5 @@
 - name: Software | Telegram
   tags: software,flatpak,telegram
-  become_user: zoliky
   community.general.flatpak:
     name: org.telegram.desktop
     method: user

@@ -1,4 +1,5 @@
 - name: Software | Dropbox
+  become: true
   ansible.builtin.package:
     name: nautilus-dropbox
     state: present
