@@ -1,5 +1,4 @@
 - name: Software | Calibre
-  tags: software,flatpak,calibre
   community.general.flatpak:
     name: com.calibre_ebook.calibre
     method: user

@@ -1,5 +1,4 @@
 - name: Software | Extensions
-  tags: software,flatpak,extensions
   community.general.flatpak:
     name: org.gnome.Extensions
     method: user

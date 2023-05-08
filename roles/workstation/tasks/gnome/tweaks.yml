@@ -1,11 +1,9 @@
 - name: GNOME | Tweaks | Disable hot corners
-  tags: gnome,tweaks
   community.general.dconf:
     key: "/org/gnome/desktop/interface/enable-hot-corners"
     value: "false"
 
 - name: GNOME | Tweaks | Enable all window buttons
-  tags: gnome,tweaks
   community.general.dconf:
     key: "/org/gnome/desktop/wm/preferences/button-layout"
     value: "'appmenu:minimize,maximize,close'"

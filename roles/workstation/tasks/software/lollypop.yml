@@ -1,5 +1,4 @@
 - name: Software | Lollypop
-  tags: software,flatpak,lollypop
   community.general.flatpak:
     name: org.gnome.Lollypop
     method: user

@@ -1,5 +1,4 @@
 - name: Software | FileZilla
-  tags: software,flatpak,filezilla
   community.general.flatpak:
     name: org.filezillaproject.Filezilla
     method: user

@@ -1,5 +1,4 @@
 - name: Software | Telegram
-  tags: software,flatpak,telegram
   community.general.flatpak:
     name: org.telegram.desktop
     method: user

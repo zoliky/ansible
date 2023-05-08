@@ -1,5 +1,4 @@
 - name: Software | Bitwarden
-  tags: software,flatpak,bitwarden
   community.general.flatpak:
     name: com.bitwarden.desktop
     method: user

@@ -1,5 +1,4 @@
 - name: Software | VLC
-  tags: software,flatpak,vlc
   community.general.flatpak:
     name: org.videolan.VLC
     method: user

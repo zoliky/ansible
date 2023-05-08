@@ -1,5 +1,4 @@
 - name: Software | Xournalpp
-  tags: software,flatpak,xournalpp
   community.general.flatpak:
     name: com.github.xournalpp.xournalpp
     method: user

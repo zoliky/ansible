@@ -1,5 +1,4 @@
 ---
 - hosts: localhost
-  tags: workstation
   roles:
     - workstation

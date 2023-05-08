@@ -1,5 +1,4 @@
 - name: Software | Zoom
-  tags: software,flatpak,zoom
   community.general.flatpak:
     name: us.zoom.Zoom
     method: user

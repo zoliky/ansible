@@ -1,5 +1,4 @@
 - name: Software | Transmission
-  tags: software,flatpak,transmission
   community.general.flatpak:
     name: com.transmissionbt.Transmission
     method: user

@@ -1,5 +1,4 @@
 - name: Software | Simplenote
-  tags: software,flatpak,simplenote
   community.general.flatpak:
     name: com.simplenote.Simplenote
     method: user

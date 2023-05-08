@@ -1,5 +1,4 @@
 - name: Software | DisplayCAL
-  tags: software,flatpak,displaycal
   community.general.flatpak:
     name: net.displaycal.DisplayCAL
     method: user

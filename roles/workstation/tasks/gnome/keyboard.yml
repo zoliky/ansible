@@ -1,11 +1,9 @@
 - name: GNOME | Keyboard | Add input sources
-  tags: gnome,keyboard
   community.general.dconf:
     key: "/org/gnome/desktop/input-sources/sources"
     value: "[('xkb', 'us'), ('xkb', 'hu'), ('xkb', 'ro+std')]"
 
 - name: GNOME | Keyboard | Remap Caps Lock to CTRL
-  tags: gnome,keyboard
   community.general.dconf:
     key: "/org/gnome/desktop/input-sources/xkb-options"
     value: "['lv3:ralt_switch', 'caps:ctrl_modifier']"

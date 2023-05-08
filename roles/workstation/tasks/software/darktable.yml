@@ -1,5 +1,4 @@
 - name: Software | Darktable
-  tags: software,flatpak,darktable
   community.general.flatpak:
     name: org.darktable.Darktable
     method: user

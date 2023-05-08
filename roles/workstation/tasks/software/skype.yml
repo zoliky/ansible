@@ -1,5 +1,4 @@
 - name: Software | Skype
-  tags: software,flatpak,skype
   community.general.flatpak:
     name: com.skype.Client
     method: user
