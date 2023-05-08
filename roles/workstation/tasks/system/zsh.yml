@@ -20,17 +20,3 @@
 - name: System | Zsh | Git clone oh-my-zsh
   ansible.builtin.command: 'git clone -c core.autocrlf=input --depth=1 https://github.com/robbyrussell/oh-my-zsh.git /home/zoliky/.oh-my-zsh'
   when: not oh_my_zsh_dir.stat.exists
-
-- name: System | Zsh | Copy zshenv
-  become_user: zoliky
-  ansible.builtin.copy:
-    src: dotfiles/zshenv
-    dest: /home/zoliky/.zshenv
-    mode: 0644
-
-- name: System | Zsh | Copy zshrc
-  become_user: zoliky
-  ansible.builtin.copy:
-    src: dotfiles/zshrc
-    dest: /home/zoliky/.zshrc
-    mode: 0644
