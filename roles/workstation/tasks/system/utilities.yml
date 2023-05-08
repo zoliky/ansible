@@ -10,5 +10,4 @@
       - meson
       - neovim
       - ripgrep
-      - "{{ python_psutil_package }}"
     state: present
