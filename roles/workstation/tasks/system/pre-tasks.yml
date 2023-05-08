@@ -1,0 +1,14 @@
+- name: System | Pre-tasks | Create user directories
+  ansible.builtin.file:
+    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - ".fonts"
+    - ".config/kitty"
+    - ".config/mpv"
+
+- name: System | Pre-tasks | Install psutil
+  ansible.builtin.package:
+    name: "{{ python_psutil_package }}"
+    state: present
