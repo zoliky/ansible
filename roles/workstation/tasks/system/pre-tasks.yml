@@ -9,6 +9,7 @@
     - ".config/mpv"
 
 - name: System | Pre-tasks | Install psutil
+  become: true
   ansible.builtin.package:
     name: "{{ python_psutil_package }}"
     state: present
