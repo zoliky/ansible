@@ -1,9 +1,3 @@
-- name: System | Fonts | Create .fonts directory
-  ansible.builtin.file:
-    path: /home/zoliky/.fonts
-    state: directory
-    mode: '0755'
-
 - name: System | Fonts | Install Hack fonts
   become: true
   ansible.builtin.package:
