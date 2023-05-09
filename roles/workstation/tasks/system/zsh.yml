@@ -12,11 +12,8 @@
     shell: /usr/bin/zsh
   when: ansible_distribution == 'Fedora'
 
-- name: System | Zsh | Check if oh-my-zsh exists
-  ansible.builtin.stat:
-    path: /home/zoliky/.oh-my-zsh
-  register: oh_my_zsh_dir
-
-- name: System | Zsh | Git clone oh-my-zsh
-  ansible.builtin.command: 'git clone -c core.autocrlf=input --depth=1 https://github.com/robbyrussell/oh-my-zsh.git /home/zoliky/.oh-my-zsh'
-  when: not oh_my_zsh_dir.stat.exists
+- name: System | Zsh | Clone ohmyzsh repository
+  ansible.builtin.git:
+    repo: "https://github.com/ohmyzsh/ohmyzsh.git"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.oh-my-zsh"
+    update: false
