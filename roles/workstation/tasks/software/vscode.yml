@@ -8,11 +8,11 @@
     description: Visual Studio Code
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     baseurl: https://packages.microsoft.com/yumrepos/vscode
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: Software | VSCode | Install VSCode
   become: true
   ansible.builtin.package:
     name: code
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"

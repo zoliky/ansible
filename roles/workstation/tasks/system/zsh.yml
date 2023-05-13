@@ -3,14 +3,14 @@
   ansible.builtin.package:
     name: zsh
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: System | Zsh | Set zsh as default shell
   become: true
   ansible.builtin.user:
     name: 'zoliky'
     shell: /usr/bin/zsh
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: System | Zsh | Clone ohmyzsh repository
   ansible.builtin.git:

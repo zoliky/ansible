@@ -4,4 +4,4 @@
     name: '@multimedia'
     allowerasing: true
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"

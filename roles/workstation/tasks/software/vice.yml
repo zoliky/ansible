@@ -3,4 +3,4 @@
   ansible.builtin.package:
     name: vice-x64
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"

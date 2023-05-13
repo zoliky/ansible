@@ -3,21 +3,21 @@
   ansible.builtin.package:
     name: source-foundry-hack-fonts
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: System | Fonts | Install Charis SIL fonts
   become: true
   ansible.builtin.package:
     name: sil-charis-fonts
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: System | Fonts | Cabextract for TrueType
   become: true
   ansible.builtin.package:
     name: cabextract
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: System | Fonts | Install Microsoft TrueType fonts
   become: true
@@ -25,4 +25,4 @@
     disable_gpg_check: true
     name: https://rpmfind.net/linux/sourceforge/m/ms/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"

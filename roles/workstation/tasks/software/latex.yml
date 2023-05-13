@@ -6,4 +6,4 @@
       - texlive-capt-of
       - texlive-nopageno
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"

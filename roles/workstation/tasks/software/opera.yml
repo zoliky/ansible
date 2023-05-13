@@ -4,4 +4,4 @@
     disable_gpg_check: true
     name: https://download3.operacdn.com/pub/opera/desktop/96.0.4693.20/linux/opera-stable_96.0.4693.20_amd64.rpm
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"

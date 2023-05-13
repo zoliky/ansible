@@ -8,11 +8,11 @@
     description: google-chrome
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
     baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
 
 - name: Software | Chrome | Install Chrome
   become: true
   ansible.builtin.package:
     name: google-chrome-stable
     state: present
-  when: ansible_distribution == 'Fedora'
+  when: ansible_facts['distribution'] == "Fedora"
