@@ -30,6 +30,7 @@
   - import_tasks: software/extensions.yml
   - import_tasks: software/filezilla.yml
   - import_tasks: software/flacon.yml
+  - import_tasks: software/flatseal.yml
   - import_tasks: software/gimp.yml
   - import_tasks: software/inkscape.yml
   - import_tasks: software/kid3.yml
