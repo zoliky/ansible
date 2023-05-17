@@ -1,5 +1,5 @@
 - name: Software | Dropbox
-  become: true
-  ansible.builtin.package:
-    name: nautilus-dropbox
+  community.general.flatpak:
+    name: com.dropbox.Client
+    method: user
     state: present
