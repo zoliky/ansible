@@ -1,7 +1,5 @@
 - name: Software | Opera
-  become: true
-  ansible.builtin.dnf:
-    disable_gpg_check: true
-    name: https://download3.operacdn.com/pub/opera/desktop/96.0.4693.20/linux/opera-stable_96.0.4693.20_amd64.rpm
+  community.general.flatpak:
+    name: com.opera.Opera
+    method: user
     state: present
-  when: ansible_facts['distribution'] == "Fedora"
