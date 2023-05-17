@@ -40,6 +40,7 @@
   - import_tasks: software/opera.yml
   - import_tasks: software/simplenote.yml
   - import_tasks: software/skype.yml
+  - import_tasks: software/spotify.yml
   - import_tasks: software/teamviewer.yml
   - import_tasks: software/telegram.yml
   - import_tasks: software/thunderbird.yml
