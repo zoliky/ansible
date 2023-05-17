@@ -1,0 +1,5 @@
+- name: Software | Flatseal
+  community.general.flatpak:
+    name: com.github.tchx84.Flatseal
+    method: user
+    state: present
