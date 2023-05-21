@@ -1,5 +1,5 @@
 - name: Software | GIMP
-  become: true
-  ansible.builtin.package:
-    name: gimp
+  community.general.flatpak:
+    name: org.gimp.GIMP
+    method: user
     state: present

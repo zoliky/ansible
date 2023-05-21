@@ -1,5 +1,5 @@
 - name: Software | Thunderbird
-  become: true
-  ansible.builtin.package:
-    name: thunderbird
+  community.general.flatpak:
+    name: org.mozilla.Thunderbird
+    method: user
     state: present

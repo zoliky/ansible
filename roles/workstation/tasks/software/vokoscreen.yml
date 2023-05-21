@@ -1,5 +1,5 @@
 - name: Software | Vokoscreen
-  become: true
-  ansible.builtin.package:
-    name: vokoscreenNG
+  community.general.flatpak:
+    name: com.github.vkohaupt.vokoscreenNG
+    method: user
     state: present

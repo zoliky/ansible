@@ -1,6 +1,5 @@
 - name: Software | VICE
-  become: true
-  ansible.builtin.package:
-    name: vice-x64
+  community.general.flatpak:
+    name: net.sf.VICE
+    method: user
     state: present
-  when: ansible_facts['distribution'] == "Fedora"
