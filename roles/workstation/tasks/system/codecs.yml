@@ -4,4 +4,4 @@
     name: '@multimedia'
     allowerasing: true
     state: present
-  when: ansible_facts['distribution'] == "Fedora"
+  when: ansible_facts['os_family'] == "RedHat"
