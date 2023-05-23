@@ -1,0 +1,6 @@
+rpmfusion_free_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-el-9"
+rpmfusion_free_repository: "https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm"
+rpmfusion_nonfree_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-el-9"
+rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
+
+python_psutil_package: python3-psutil
