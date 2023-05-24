@@ -13,7 +13,7 @@
   loop:
     - "{{ rpmfusion_free_gpg_key }}"
     - "{{ rpmfusion_nonfree_gpg_key }}"
-  when: ansible_facts['distribution'] == "Fedora"
+  when: ansible_facts['os_family'] == "RedHat"
 
 - name: System | Repositories | Add RPM Fusion repositories
   become: true
@@ -23,4 +23,4 @@
   loop:
     - "{{ rpmfusion_free_repository }}"
     - "{{ rpmfusion_nonfree_repository }}"
-  when: ansible_facts['distribution'] == "Fedora"
+  when: ansible_facts['os_family'] == "RedHat"
