@@ -5,6 +5,26 @@
     state: present
     method: user
 
+- name: System | Repositories | Add CRB repository
+  become: true
+  ansible.builtin.command:
+    subscription-manager repos --enable codeready-builder-for-rhel-9-x86_64-rpms
+  when: ansible_facts['distribution'] == "RedHat"
+
+- name: System | Repositories | Add EPEL GPG key
+  become: true
+  ansible.builtin.rpm_key:
+    key: "{{ epel_gpg_key }}"
+    state: present
+  when: ansible_facts['distribution'] == "RedHat"
+
+- name: System | Repositories | Add EPEL repository
+  become: true
+  ansible.builtin.dnf:
+    name: "{{ epel_repository }}"
+    state: present
+  when: ansible_facts['distribution'] == "RedHat"
+
 - name: System | Repositories | Add RPM Fusion GPG keys
   become: true
   ansible.builtin.rpm_key:
