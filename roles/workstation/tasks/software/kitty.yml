@@ -1,5 +1,0 @@
-- name: Software | Kitty
-  become: true
-  ansible.builtin.package:
-    name: kitty
-    state: present
