@@ -6,6 +6,7 @@
       - vim
       - dfc
       - htop
+      - kitty
       - meson
       - neovim
       - ripgrep
