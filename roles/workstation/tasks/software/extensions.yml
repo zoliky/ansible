@@ -1,5 +1,0 @@
-- name: Software | Extensions
-  community.general.flatpak:
-    name: org.gnome.Extensions
-    method: user
-    state: present

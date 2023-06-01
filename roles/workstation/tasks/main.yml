@@ -27,7 +27,6 @@
   - import_tasks: software/displaycal.yml
   - import_tasks: software/dropbox.yml
   - import_tasks: software/emacs.yml
-  - import_tasks: software/extensions.yml
   - import_tasks: software/filezilla.yml
   - import_tasks: software/flacon.yml
   - import_tasks: software/flatseal.yml
