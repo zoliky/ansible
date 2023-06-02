@@ -1,0 +1,6 @@
+- name: System | Services | Ensure SSD TRIM is enabled
+  become: true
+  ansible.builtin.systemd:
+    name: fstrim.timer
+    state: started
+    enabled: true
