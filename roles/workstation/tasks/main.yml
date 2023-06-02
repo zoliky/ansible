@@ -5,6 +5,7 @@
   - include_tasks: system/pre-tasks.yml
   - include_tasks: system/repositories.yml
   - include_tasks: system/utilities.yml
+  - include_tasks: system/services.yml
   - include_tasks: system/codecs.yml
   - include_tasks: system/zsh.yml
   - include_tasks: system/fonts.yml
