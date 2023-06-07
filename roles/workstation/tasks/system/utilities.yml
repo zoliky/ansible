@@ -5,6 +5,7 @@
       - mpv
       - vim
       - dfc
+      - curl
       - htop
       - kitty
       - rsync
