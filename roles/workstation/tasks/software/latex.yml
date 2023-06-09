@@ -1,9 +1,0 @@
-- name: Software | LaTeX
-  become: true
-  ansible.builtin.package:
-    name:
-      - texlive-scheme-small
-      - texlive-capt-of
-      - texlive-nopageno
-    state: present
-  when: ansible_facts['distribution'] == "Fedora"
