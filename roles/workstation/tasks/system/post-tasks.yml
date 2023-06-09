@@ -7,6 +7,7 @@
   ansible.builtin.copy:
     src: "{{ lookup('ansible.builtin.env', 'HOME') }}/dotfiles/{{ item.src }}"
     dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/{{ item.dest }}"
+    mode: '0644'
   loop:
     - { src: "editorconfig", dest: ".editorconfig" }
     - { src: "gitconfig", dest: ".gitconfig" }

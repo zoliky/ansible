@@ -2,7 +2,7 @@
   ansible.builtin.copy:
     src: wallpapers/
     dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.local/share/backgrounds/"
-    mode: 0644
+    mode: '0644'
 
 - name: GNOME | Appearance | Set wallpaper
   community.general.dconf:
