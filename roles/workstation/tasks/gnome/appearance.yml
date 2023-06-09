@@ -1,13 +1,13 @@
 - name: GNOME | Appearance | Copy wallpapers
   ansible.builtin.copy:
     src: wallpapers/
-    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/Pictures/"
+    dest: "{{ lookup('ansible.builtin.env', 'HOME') }}/.local/share/backgrounds/"
     mode: 0644
 
 - name: GNOME | Appearance | Set wallpaper
   community.general.dconf:
     key: "/org/gnome/desktop/background/picture-uri"
-    value: "'file://{{ lookup('ansible.builtin.env', 'HOME') }}/Pictures/0004.jpg'"
+    value: "'file://{{ lookup('ansible.builtin.env', 'HOME') }}/.local/share/backgrounds/0004.jpg'"
 
 - name: GNOME | Appearance | Set wallpaper position
   community.general.dconf:
