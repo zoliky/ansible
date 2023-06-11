@@ -9,8 +9,10 @@
     - ".config/kitty"
     - ".config/mpv"
 
-- name: System | Pre-tasks | Install psutil
+- name: System | Pre-tasks | Install prerequisite packages
   become: true
   ansible.builtin.package:
-    name: "{{ python_psutil_package }}"
+    name:
+      - flatpak
+      - "{{ python_psutil_package }}"
     state: present
