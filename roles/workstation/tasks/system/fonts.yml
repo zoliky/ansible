@@ -5,13 +5,6 @@
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
-- name: System | Fonts | Install Charis SIL fonts
-  become: true
-  ansible.builtin.package:
-    name: sil-charis-fonts
-    state: present
-  when: ansible_facts['distribution'] == "Fedora"
-
 - name: System | Fonts | Cabextract for TrueType
   become: true
   ansible.builtin.package:
