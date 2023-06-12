@@ -10,7 +10,6 @@
   ansible.builtin.package:
     name: isync
     state: present
-  when: ansible_facts['os_family'] == "RedHat"
 
 - name: Software | Emacs | Install hunspell
   become: true
