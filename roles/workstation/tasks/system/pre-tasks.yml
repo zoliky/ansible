@@ -14,5 +14,5 @@
   ansible.builtin.package:
     name:
       - flatpak
-      - "{{ python_psutil_package }}"
+      - "{{ package_python_psutil }}"
     state: present

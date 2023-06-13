@@ -1,2 +1,2 @@
-python_psutil_package: python3-psutil
+package_python_psutil: python3-psutil
 package_fonts_hack: fonts-hack-ttf

@@ -3,5 +3,5 @@ rpmfusion_free_repository: "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-
 rpmfusion_nonfree_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020"
 rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-38.noarch.rpm"
 
-python_psutil_package: python3-psutil
+package_python_psutil: python3-psutil
 package_fonts_hack: source-foundry-hack-fonts
