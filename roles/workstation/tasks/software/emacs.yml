@@ -16,7 +16,7 @@
   ansible.builtin.package:
     name:
       - hunspell
-      - hunspell-en-US
+      - "{{ package_hunspell_en }}"
       - hunspell-hu
       - hunspell-ro
     state: present
