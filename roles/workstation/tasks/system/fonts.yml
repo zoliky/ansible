@@ -3,7 +3,7 @@
   ansible.builtin.package:
     name: "{{ package_fonts_hack }}"
     state: present
-  when: ansible_facts['distribution'] == "Fedora"
+  when: ansible_facts['distribution'] != "RedHat"
 
 - name: System | Fonts | Cabextract for TrueType
   become: true
