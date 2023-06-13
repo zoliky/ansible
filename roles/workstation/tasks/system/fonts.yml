@@ -1,7 +1,7 @@
 - name: System | Fonts | Install Hack fonts
   become: true
   ansible.builtin.package:
-    name: source-foundry-hack-fonts
+    name: "{{ package_fonts_hack }}"
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
