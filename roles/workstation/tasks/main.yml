@@ -1,55 +1,55 @@
-# Load distribution-specific variables
-- include_vars: "{{ ansible_distribution }}.yml"
+- name: Load distribution-specific variables
+  ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
 
 - block:
-  - include_tasks: system/pre-tasks.yml
-  - include_tasks: system/repositories.yml
-  - include_tasks: system/utilities.yml
-  - include_tasks: system/services.yml
-  - include_tasks: system/codecs.yml
-  - include_tasks: system/zsh.yml
-  - include_tasks: system/fonts.yml
-  - include_tasks: system/wacom.yml
+    - ansible.builtin.include_tasks: system/pre-tasks.yml
+    - ansible.builtin.include_tasks: system/repositories.yml
+    - ansible.builtin.include_tasks: system/utilities.yml
+    - ansible.builtin.include_tasks: system/services.yml
+    - ansible.builtin.include_tasks: system/codecs.yml
+    - ansible.builtin.include_tasks: system/zsh.yml
+    - ansible.builtin.include_tasks: system/fonts.yml
+    - ansible.builtin.include_tasks: system/wacom.yml
 
-  ## GNOME
-  - include_tasks: gnome/appearance.yml
-  - include_tasks: gnome/datetime.yml
-  - include_tasks: gnome/display.yml
-  - include_tasks: gnome/extensions.yml
-  - include_tasks: gnome/keyboard.yml
-  - include_tasks: gnome/tweaks.yml
-  
-  ## Install software
-  - import_tasks: software/audacity.yml
-  - import_tasks: software/bitwarden.yml
-  - import_tasks: software/calibre.yml
-  - import_tasks: software/chrome.yml
-  - import_tasks: software/darktable.yml
-  - import_tasks: software/deadbeef.yml
-  - import_tasks: software/displaycal.yml
-  - import_tasks: software/dropbox.yml
-  - import_tasks: software/emacs.yml
-  - import_tasks: software/filezilla.yml
-  - import_tasks: software/flacon.yml
-  - import_tasks: software/flatseal.yml
-  - import_tasks: software/gimp.yml
-  - import_tasks: software/inkscape.yml
-  - import_tasks: software/kid3.yml
-  - import_tasks: software/lollypop.yml
-  - import_tasks: software/menulibre.yml
-  - import_tasks: software/opera.yml
-  - import_tasks: software/simplenote.yml
-  - import_tasks: software/skype.yml
-  - import_tasks: software/spotify.yml
-  - import_tasks: software/teamviewer.yml
-  - import_tasks: software/telegram.yml
-  - import_tasks: software/thunderbird.yml
-  - import_tasks: software/transmission.yml
-  - import_tasks: software/vice.yml
-  - import_tasks: software/vlc.yml
-  - import_tasks: software/vokoscreen.yml
-  - import_tasks: software/vscode.yml
-  - import_tasks: software/xournalpp.yml
-  - import_tasks: software/zoom.yml
+    ## GNOME
+    - ansible.builtin.include_tasks: gnome/appearance.yml
+    - ansible.builtin.include_tasks: gnome/datetime.yml
+    - ansible.builtin.include_tasks: gnome/display.yml
+    - ansible.builtin.include_tasks: gnome/extensions.yml
+    - ansible.builtin.include_tasks: gnome/keyboard.yml
+    - ansible.builtin.include_tasks: gnome/tweaks.yml
 
-  - include_tasks: system/post-tasks.yml
+    ## Software
+    - ansible.builtin.import_tasks: software/audacity.yml
+    - ansible.builtin.import_tasks: software/bitwarden.yml
+    - ansible.builtin.import_tasks: software/calibre.yml
+    - ansible.builtin.import_tasks: software/chrome.yml
+    - ansible.builtin.import_tasks: software/darktable.yml
+    - ansible.builtin.import_tasks: software/deadbeef.yml
+    - ansible.builtin.import_tasks: software/displaycal.yml
+    - ansible.builtin.import_tasks: software/dropbox.yml
+    - ansible.builtin.import_tasks: software/emacs.yml
+    - ansible.builtin.import_tasks: software/filezilla.yml
+    - ansible.builtin.import_tasks: software/flacon.yml
+    - ansible.builtin.import_tasks: software/flatseal.yml
+    - ansible.builtin.import_tasks: software/gimp.yml
+    - ansible.builtin.import_tasks: software/inkscape.yml
+    - ansible.builtin.import_tasks: software/kid3.yml
+    - ansible.builtin.import_tasks: software/lollypop.yml
+    - ansible.builtin.import_tasks: software/menulibre.yml
+    - ansible.builtin.import_tasks: software/opera.yml
+    - ansible.builtin.import_tasks: software/simplenote.yml
+    - ansible.builtin.import_tasks: software/skype.yml
+    - ansible.builtin.import_tasks: software/spotify.yml
+    - ansible.builtin.import_tasks: software/teamviewer.yml
+    - ansible.builtin.import_tasks: software/telegram.yml
+    - ansible.builtin.import_tasks: software/thunderbird.yml
+    - ansible.builtin.import_tasks: software/transmission.yml
+    - ansible.builtin.import_tasks: software/vice.yml
+    - ansible.builtin.import_tasks: software/vlc.yml
+    - ansible.builtin.import_tasks: software/vokoscreen.yml
+    - ansible.builtin.import_tasks: software/vscode.yml
+    - ansible.builtin.import_tasks: software/xournalpp.yml
+    - ansible.builtin.import_tasks: software/zoom.yml
+
+    - ansible.builtin.include_tasks: system/post-tasks.yml
