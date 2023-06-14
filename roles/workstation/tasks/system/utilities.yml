@@ -13,3 +13,10 @@
       - neovim
       - ripgrep
     state: present
+
+- name: System | Utilities | Install fzf
+  become: true
+  ansible.builtin.package:
+    name: fzf
+    state: present
+  when: ansible_facts['distribution'] != "RedHat"
