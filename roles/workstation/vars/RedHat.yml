@@ -6,3 +6,4 @@ rpmfusion_nonfree_gpg_key: "https://rpmfusion.org/keys?action=AttachFile&do=get&
 rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-9.noarch.rpm"
 
 package_python_psutil: python3-psutil
+package_hunspell_en: hunspell-en-US

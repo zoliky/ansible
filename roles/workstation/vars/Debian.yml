@@ -1,2 +1,3 @@
 package_python_psutil: python3-psutil
 package_fonts_hack: fonts-hack-ttf
+package_hunspell_en: hunspell-en-us
