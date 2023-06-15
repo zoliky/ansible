@@ -1,0 +1,6 @@
+- name: Software | LibreOffice
+  community.general.flatpak:
+    name: org.libreoffice.LibreOffice
+    method: user
+    state: present
+  when: ansible_facts['distribution'] != "Fedora"
