@@ -35,6 +35,7 @@
     - ansible.builtin.import_tasks: software/gimp.yml
     - ansible.builtin.import_tasks: software/inkscape.yml
     - ansible.builtin.import_tasks: software/kid3.yml
+    - ansible.builtin.import_tasks: software/libreoffice.yml
     - ansible.builtin.import_tasks: software/lollypop.yml
     - ansible.builtin.import_tasks: software/menulibre.yml
     - ansible.builtin.import_tasks: software/opera.yml
