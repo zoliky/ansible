@@ -1,0 +1,5 @@
+- name: Software | Kdenlive
+  community.general.flatpak:
+    name: org.kde.kdenlive
+    method: user
+    state: present
