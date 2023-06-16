@@ -34,6 +34,7 @@
     - ansible.builtin.import_tasks: software/flatseal.yml
     - ansible.builtin.import_tasks: software/gimp.yml
     - ansible.builtin.import_tasks: software/inkscape.yml
+    - ansible.builtin.import_tasks: software/kdenlive.yml
     - ansible.builtin.import_tasks: software/kid3.yml
     - ansible.builtin.import_tasks: software/libreoffice.yml
     - ansible.builtin.import_tasks: software/lollypop.yml
