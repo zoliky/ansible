@@ -17,6 +17,7 @@
     - ansible.builtin.include_tasks: gnome/display.yml
     - ansible.builtin.include_tasks: gnome/extensions.yml
     - ansible.builtin.include_tasks: gnome/keyboard.yml
+    - ansible.builtin.include_tasks: gnome/plugins.yml
     - ansible.builtin.include_tasks: gnome/tweaks.yml
 
     ## Software
