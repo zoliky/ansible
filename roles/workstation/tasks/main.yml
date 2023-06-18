@@ -23,6 +23,7 @@
     ## Software
     - ansible.builtin.import_tasks: software/audacity.yml
     - ansible.builtin.import_tasks: software/bitwarden.yml
+    - ansible.builtin.import_tasks: software/boxes.yml
     - ansible.builtin.import_tasks: software/calibre.yml
     - ansible.builtin.import_tasks: software/chrome.yml
     - ansible.builtin.import_tasks: software/darktable.yml
