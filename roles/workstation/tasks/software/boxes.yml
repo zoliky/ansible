@@ -1,0 +1,6 @@
+- name: Software | Boxes
+  community.general.flatpak:
+    name: org.gnome.Boxes
+    method: user
+    state: present
+  when: ansible_facts['distribution'] != "Fedora"
