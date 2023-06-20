@@ -14,5 +14,6 @@
   ansible.builtin.package:
     name:
       - flatpak
+      - cabextract
       - "{{ package_python_psutil }}"
     state: present
