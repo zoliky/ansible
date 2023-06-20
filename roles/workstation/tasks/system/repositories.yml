@@ -44,3 +44,17 @@
     - "{{ rpmfusion_free_repository }}"
     - "{{ rpmfusion_nonfree_repository }}"
   when: ansible_facts['os_family'] == "RedHat"
+
+- name: System | Repositories | Add custom APT sources
+  become: true
+  ansible.builtin.template:
+    src: sources.list.j2
+    dest: /etc/apt/sources.list
+    mode: '0644'
+  when: ansible_facts['distribution'] == "Debian"
+
+- name: System | Repositories | Update APT cache
+  become: true
+  ansible.builtin.apt:
+    update_cache: true
+  when: ansible_facts['distribution'] == "Debian"
