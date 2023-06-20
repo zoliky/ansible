@@ -5,13 +5,6 @@
     state: present
   when: ansible_facts['distribution'] != "RedHat"
 
-- name: System | Fonts | Cabextract for TrueType
-  become: true
-  ansible.builtin.package:
-    name: cabextract
-    state: present
-  when: ansible_facts['distribution'] == "Fedora"
-
 - name: System | Fonts | Install Microsoft TrueType fonts
   become: true
   ansible.builtin.dnf:
