@@ -5,12 +5,6 @@
     dest: /usr/local/bin/
     mode: '0755'
 
-- name: System | Wacom | Create autostart directory
-  ansible.builtin.file:
-    path: "{{ lookup('ansible.builtin.env', 'HOME') }}/.config/autostart"
-    state: directory
-    mode: '0755'
-
 - name: System | Wacom | Copy wacom.desktop
   ansible.builtin.copy:
     src: wacom/wacom.desktop
