@@ -6,8 +6,9 @@
   loop:
     - "tmp"
     - ".fonts"
-    - ".config/kitty"
     - ".config/mpv"
+    - ".config/kitty"
+    - ".config/autostart"
 
 - name: System | Pre-tasks | Install prerequisite packages
   become: true
