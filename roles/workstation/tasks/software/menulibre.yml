@@ -3,4 +3,3 @@
   ansible.builtin.package:
     name: menulibre
     state: present
-  when: ansible_facts['distribution'] != "RedHat"

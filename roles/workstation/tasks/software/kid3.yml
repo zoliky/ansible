@@ -3,4 +3,3 @@
   ansible.builtin.package:
     name: kid3-qt
     state: present
-  when: ansible_facts['distribution'] != "RedHat"
