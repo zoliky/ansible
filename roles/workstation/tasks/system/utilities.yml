@@ -4,6 +4,7 @@
     name:
       - mpv
       - vim
+      - fzf
       - dfc
       - curl
       - htop
@@ -12,10 +13,4 @@
       - meson
       - neovim
       - ripgrep
-    state: present
-
-- name: System | Utilities | Install fzf
-  become: true
-  ansible.builtin.package:
-    name: fzf
     state: present
