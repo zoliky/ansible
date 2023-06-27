@@ -1,0 +1,5 @@
+- name: Software | OBS
+  community.general.flatpak:
+    name: com.obsproject.Studio
+    method: user
+    state: present
