@@ -3,6 +3,7 @@
 
 - block:
     - ansible.builtin.include_tasks: system/pre-tasks.yml
+    - ansible.builtin.include_tasks: system/cleanup.yml
     - ansible.builtin.include_tasks: system/repositories.yml
     - ansible.builtin.include_tasks: system/utilities.yml
     - ansible.builtin.include_tasks: system/services.yml
