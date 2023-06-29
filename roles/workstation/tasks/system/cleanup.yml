@@ -1,0 +1,15 @@
+- name: System | Cleanup | Remove unneeded packages
+  become: true
+  ansible.builtin.apt:
+    name:
+      - gnome-games
+      - gnome-music
+      - gnome-sound-recorder
+      - transmission-gtk
+      - libreoffice-common
+      - libreoffice-style-colibre
+      - libreoffice-style-elementary
+    purge: true
+    autoremove: true
+    state: absent
+  when: ansible_facts['distribution'] == "Debian"
