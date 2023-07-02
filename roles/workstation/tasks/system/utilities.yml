@@ -8,6 +8,7 @@
       - dfc
       - zip
       - curl
+      - tmux
       - htop
       - kitty
       - rsync
