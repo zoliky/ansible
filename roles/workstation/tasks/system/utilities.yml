@@ -17,3 +17,10 @@
       - ripgrep
       - net-tools
     state: present
+
+- name: System | Utilities | Install ufw
+  become: true
+  ansible.builtin.package:
+    name: ufw
+    state: present
+  when: ansible_facts['distribution'] == "Debian"
