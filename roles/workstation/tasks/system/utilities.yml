@@ -15,4 +15,5 @@
       - meson
       - neovim
       - ripgrep
+      - net-tools
     state: present
