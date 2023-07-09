@@ -14,6 +14,7 @@
       - rsync
       - meson
       - neovim
+      - gnupg2
       - ripgrep
       - net-tools
     state: present
