@@ -6,3 +6,4 @@ rpmfusion_nonfree_repository: "https://mirrors.rpmfusion.org/nonfree/fedora/rpmf
 package_python_psutil: python3-psutil
 package_fonts_hack: source-foundry-hack-fonts
 package_hunspell_en: hunspell-en-US
+package_dashtodock: gnome-shell-extension-dash-to-dock
