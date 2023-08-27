@@ -4,3 +4,9 @@
     method: user
     state: present
   when: ansible_facts['distribution'] == "Fedora"
+
+- name: GNOME | Extensions | Install Dash to Dock
+  become: true
+  ansible.builtin.package:
+    name: "{{ package_dashtodock }}"
+    state: present
