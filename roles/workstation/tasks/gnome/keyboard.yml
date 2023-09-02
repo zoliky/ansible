@@ -7,3 +7,8 @@
   community.general.dconf:
     key: "/org/gnome/desktop/input-sources/xkb-options"
     value: "['altwin:swap_lalt_lwin', 'caps:ctrl_modifier']"
+
+- name: GNOME | Keyboard | Map Super_R to Activities Overview
+  community.general.dconf:
+    key: "/org/gnome/mutter/overlay-key"
+    value: "'Super_R'"
