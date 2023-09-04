@@ -6,6 +6,7 @@
     - ansible.builtin.include_tasks: system/cleanup.yml
     - ansible.builtin.include_tasks: system/repositories.yml
     - ansible.builtin.include_tasks: system/utilities.yml
+    - ansible.builtin.include_tasks: system/keyboard.yml
     - ansible.builtin.include_tasks: system/services.yml
     - ansible.builtin.include_tasks: system/codecs.yml
     - ansible.builtin.include_tasks: system/zsh.yml
