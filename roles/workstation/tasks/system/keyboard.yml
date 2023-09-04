@@ -1,0 +1,8 @@
+- name: System | Keyboard | Copy XKB layout file
+  become: true
+  ansible.builtin.template:
+    src: pc.j2
+    dest: /usr/share/X11/xkb/symbols/pc
+    mode: '0644'
+    backup: true
+  when: ansible_facts['distribution'] == "Debian"
