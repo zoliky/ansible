@@ -1,0 +1,14 @@
+- name: System | GRUB | Copy GRUB file
+  become: true
+  ansible.builtin.template:
+    src: grub.j2
+    dest: /etc/default/grub
+    mode: '0644'
+    backup: true
+  when: ansible_facts['distribution'] == "Debian"
+
+- name: System | GRUB | Update GRUB
+  become: true
+  ansible.builtin.command:
+    cmd: update-grub
+  when: ansible_facts['distribution'] == "Debian"
