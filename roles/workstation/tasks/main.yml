@@ -59,4 +59,5 @@
     - ansible.builtin.import_tasks: software/xournalpp.yml
     - ansible.builtin.import_tasks: software/zoom.yml
 
+    - ansible.builtin.include_tasks: system/grub.yml
     - ansible.builtin.include_tasks: system/post-tasks.yml
