@@ -7,8 +7,6 @@
 
 Ansible is a configuration management tool that I use to automate the installation and configuration of all the software on my computer.
 
-Ansible was developed by Red Hat Inc., which is now a subsidiary of IBM.
-
 [[./static/linuxdesktop.jpg]]
 
 * Installation
