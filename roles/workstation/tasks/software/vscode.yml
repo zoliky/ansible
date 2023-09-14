@@ -16,3 +16,10 @@
     name: code
     state: present
   when: ansible_facts['distribution'] == "Fedora"
+
+- name: Software | VSCode | Debian | Install VSCode
+  become: true
+  ansible.builtin.apt:
+    deb: https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+    state: present
+  when: ansible_facts['distribution'] == "Debian"
