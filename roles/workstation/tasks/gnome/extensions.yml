@@ -1,7 +1,7 @@
 - name: GNOME | Extensions | Install extension manager app
-  community.general.flatpak:
-    name: org.gnome.Extensions
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: gnome-extensions-app
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
