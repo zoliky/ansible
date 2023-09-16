@@ -1,5 +1,0 @@
-- name: Software | Bitwarden
-  community.general.flatpak:
-    name: com.bitwarden.desktop
-    method: user
-    state: present
