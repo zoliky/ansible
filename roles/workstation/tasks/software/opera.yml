@@ -1,5 +1,0 @@
-- name: Software | Opera
-  community.general.flatpak:
-    name: com.opera.Opera
-    method: user
-    state: present

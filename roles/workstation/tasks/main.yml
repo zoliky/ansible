@@ -43,7 +43,6 @@
     - ansible.builtin.import_tasks: software/lollypop.yml
     - ansible.builtin.import_tasks: software/menulibre.yml
     - ansible.builtin.import_tasks: software/obs.yml
-    - ansible.builtin.import_tasks: software/opera.yml
     - ansible.builtin.import_tasks: software/simplenote.yml
     - ansible.builtin.import_tasks: software/skype.yml
     - ansible.builtin.import_tasks: software/spotify.yml
