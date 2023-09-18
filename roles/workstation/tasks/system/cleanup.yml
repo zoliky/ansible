@@ -1,4 +1,4 @@
-- name: System | Cleanup | Remove unneeded packages
+- name: System | Cleanup | Remove unwanted packages
   become: true
   ansible.builtin.apt:
     name:
