@@ -1,5 +1,5 @@
 - name: Software | Darktable
-  community.general.flatpak:
-    name: org.darktable.Darktable
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: darktable
     state: present

@@ -1,5 +1,5 @@
 - name: Software | Audacity
-  community.general.flatpak:
-    name: org.audacityteam.Audacity
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: audacity
     state: present

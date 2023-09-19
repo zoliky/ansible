@@ -1,5 +1,5 @@
 - name: Software | Inkscape
-  community.general.flatpak:
-    name: org.inkscape.Inkscape
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: inkscape
     state: present

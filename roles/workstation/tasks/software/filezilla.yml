@@ -1,5 +1,5 @@
 - name: Software | FileZilla
-  community.general.flatpak:
-    name: org.filezillaproject.Filezilla
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: filezilla
     state: present
