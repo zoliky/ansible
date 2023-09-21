@@ -1,0 +1,5 @@
+- name: Software | Blender
+  become: true
+  ansible.builtin.package:
+    name: blender
+    state: present
