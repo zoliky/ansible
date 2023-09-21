@@ -7,9 +7,6 @@
       - gnome-music
       - gnome-sound-recorder
       - transmission-gtk
-      - libreoffice-common
-      - libreoffice-style-colibre
-      - libreoffice-style-elementary
     purge: true
     autoremove: true
     state: absent
