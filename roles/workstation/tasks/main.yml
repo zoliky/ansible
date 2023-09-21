@@ -45,7 +45,6 @@
     - ansible.builtin.import_tasks: software/obs.yml
     - ansible.builtin.import_tasks: software/simplenote.yml
     - ansible.builtin.import_tasks: software/skype.yml
-    - ansible.builtin.import_tasks: software/spotify.yml
     - ansible.builtin.import_tasks: software/teamviewer.yml
     - ansible.builtin.import_tasks: software/telegram.yml
     - ansible.builtin.import_tasks: software/thunderbird.yml
