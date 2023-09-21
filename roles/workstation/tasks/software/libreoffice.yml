@@ -1,6 +1,8 @@
 - name: Software | LibreOffice
-  community.general.flatpak:
-    name: org.libreoffice.LibreOffice
-    method: user
-    state: present
-  when: ansible_facts['distribution'] != "Fedora"
+  become: true
+  ansible.builtin.apt:
+    name: libreoffice
+    state: latest
+    default_release: bookworm-backports
+    update_cache: true
+  when: ansible_facts['distribution'] == "Debian"
