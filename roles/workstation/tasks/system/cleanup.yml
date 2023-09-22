@@ -6,7 +6,6 @@
       - gnome-games
       - gnome-music
       - gnome-sound-recorder
-      - transmission-gtk
     purge: true
     autoremove: true
     state: absent
