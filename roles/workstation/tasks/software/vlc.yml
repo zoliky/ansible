@@ -1,5 +1,5 @@
 - name: Software | VLC
-  community.general.flatpak:
-    name: org.videolan.VLC
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: vlc
     state: present

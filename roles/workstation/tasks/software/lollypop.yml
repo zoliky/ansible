@@ -1,5 +1,5 @@
 - name: Software | Lollypop
-  community.general.flatpak:
-    name: org.gnome.Lollypop
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: lollypop
     state: present

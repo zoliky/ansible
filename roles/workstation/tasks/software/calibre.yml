@@ -1,5 +1,5 @@
 - name: Software | Calibre
-  community.general.flatpak:
-    name: com.calibre_ebook.calibre
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: calibre
     state: present
