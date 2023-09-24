@@ -1,7 +1,8 @@
 - name: Load distribution-specific variables
   ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
 
-- block:
+- name: System
+  block:
     - ansible.builtin.include_tasks: system/pre-tasks.yml
     - ansible.builtin.include_tasks: system/cleanup.yml
     - ansible.builtin.include_tasks: system/repositories.yml
@@ -13,7 +14,8 @@
     - ansible.builtin.include_tasks: system/fonts.yml
     - ansible.builtin.include_tasks: system/wacom.yml
 
-    ## GNOME
+- name: GNOME
+  block:
     - ansible.builtin.include_tasks: gnome/appearance.yml
     - ansible.builtin.include_tasks: gnome/datetime.yml
     - ansible.builtin.include_tasks: gnome/display.yml
@@ -22,7 +24,8 @@
     - ansible.builtin.include_tasks: gnome/plugins.yml
     - ansible.builtin.include_tasks: gnome/tweaks.yml
 
-    ## Software
+- name: Software
+  block:
     - ansible.builtin.import_tasks: software/audacity.yml
     - ansible.builtin.import_tasks: software/blender.yml
     - ansible.builtin.import_tasks: software/boxes.yml
@@ -57,5 +60,7 @@
     - ansible.builtin.import_tasks: software/xournalpp.yml
     - ansible.builtin.import_tasks: software/zoom.yml
 
+- name: Other
+  block:
     - ansible.builtin.include_tasks: system/grub.yml
     - ansible.builtin.include_tasks: system/post-tasks.yml
