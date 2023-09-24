@@ -15,6 +15,7 @@
     - ansible.builtin.include_tasks: system/wacom.yml
 
 - name: GNOME
+  when: gnome is defined and gnome is true
   block:
     - ansible.builtin.include_tasks: gnome/appearance.yml
     - ansible.builtin.include_tasks: gnome/datetime.yml
