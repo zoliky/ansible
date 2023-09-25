@@ -7,3 +7,5 @@ package_python_psutil: python3-psutil
 package_fonts_hack: source-foundry-hack-fonts
 package_hunspell_en: hunspell-en-US
 package_dashtodock: gnome-shell-extension-dash-to-dock
+package_vokoscreen: vokoscreenNG
+package_vice: vice-x64
