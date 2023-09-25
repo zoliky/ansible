@@ -1,5 +1,5 @@
 - name: Software | OBS
-  community.general.flatpak:
-    name: com.obsproject.Studio
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: obs-studio
     state: present
