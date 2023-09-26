@@ -1,0 +1,17 @@
+- name: GNOME | Packages | Install GNOME Boxes
+  become: true
+  ansible.builtin.apt:
+    name:
+      - gnome-boxes
+      - spice-vdagent
+      - spice-webdavd
+    state: present
+  when: ansible_facts['distribution'] == "Debian"
+
+- name: GNOME | Packages | Install selected games
+  become: true
+  ansible.builtin.package:
+    name:
+      - aisleriot
+      - gnome-mahjongg
+    state: present
