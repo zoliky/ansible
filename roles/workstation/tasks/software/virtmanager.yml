@@ -1,0 +1,5 @@
+- name: Software | VirtManager
+  become: true
+  ansible.builtin.package:
+    name: virt-manager
+    state: present
