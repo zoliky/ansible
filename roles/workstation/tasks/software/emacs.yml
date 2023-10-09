@@ -1,3 +1,12 @@
+- name: Software | Debian | Emacs
+  become: true
+  ansible.builtin.apt:
+    name: emacs
+    state: present
+    default_release: bookworm-backports
+    update_cache: true
+  when: ansible_facts['distribution'] == "Debian"
+
 - name: Software | Emacs | Install maildir-utils
   become: true
   ansible.builtin.package:
