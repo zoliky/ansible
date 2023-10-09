@@ -8,15 +8,19 @@
       - dfc
       - zip
       - curl
+      - time
       - tmux
       - htop
       - kitty
       - rsync
       - meson
+      - hdparm
       - neovim
       - gnupg2
       - ripgrep
+      - neofetch
       - net-tools
+      - distrobox
     state: present
 
 - name: System | Utilities | Install ufw
