@@ -1,5 +1,5 @@
 - name: Load distribution-specific variables
-  ansible.builtin.include_vars: "{{ ansible_distribution }}.yml"
+  ansible.builtin.include_vars: "{{ ansible_distribution | lower }}.yml"
 
 - name: System
   block:
