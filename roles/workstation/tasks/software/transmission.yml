@@ -1,6 +1,6 @@
 - name: Software | Transmission
-  community.general.flatpak:
-    name: com.transmissionbt.Transmission
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: transmission-gtk
     state: present
   when: ansible_facts['distribution'] == "Fedora"
