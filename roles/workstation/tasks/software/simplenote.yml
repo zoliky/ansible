@@ -1,5 +1,0 @@
-- name: Software | Simplenote
-  community.general.flatpak:
-    name: com.simplenote.Simplenote
-    method: user
-    state: present
