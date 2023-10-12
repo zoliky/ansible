@@ -4,3 +4,10 @@
     name: nautilus-dropbox
     state: present
   when: ansible_facts['distribution'] == "Fedora"
+
+- name: Software | Debian | Dropbox
+  become: true
+  ansible.builtin.apt:
+    deb: https://www.dropbox.com/download?dl=packages/debian/dropbox_2023.09.06_amd64.deb
+    state: present
+  when: ansible_facts['distribution'] == "Debian"
