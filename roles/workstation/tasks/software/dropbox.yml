@@ -1,5 +1,6 @@
 - name: Software | Dropbox
-  community.general.flatpak:
-    name: com.dropbox.Client
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: nautilus-dropbox
     state: present
+  when: ansible_facts['distribution'] == "Fedora"
