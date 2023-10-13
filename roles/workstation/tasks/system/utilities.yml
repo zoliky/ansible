@@ -21,6 +21,7 @@
       - neofetch
       - net-tools
       - distrobox
+      - python3-gpg
     state: present
 
 - name: System | Utilities | Install ufw
