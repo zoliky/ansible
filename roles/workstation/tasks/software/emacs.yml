@@ -14,6 +14,13 @@
     state: present
   when: ansible_facts['distribution'] == "Fedora"
 
+- name: Software | Emacs | Install mu4e
+  become: true
+  ansible.builtin.package:
+    name: mu4e
+    state: present
+  when: ansible_facts['distribution'] == "Debian"
+
 - name: Software | Emacs | Install isync
   become: true
   ansible.builtin.package:
