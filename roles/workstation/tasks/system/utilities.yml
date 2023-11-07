@@ -30,3 +30,12 @@
     name: ufw
     state: present
   when: ansible_facts['distribution'] == "Debian"
+
+- name: System | Utilities | Install yt-dlp
+  become: true
+  ansible.builtin.apt:
+    name: yt-dlp
+    state: latest
+    default_release: bookworm-backports
+    update_cache: true
+  when: ansible_facts['distribution'] == "Debian"
