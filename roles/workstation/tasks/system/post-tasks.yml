@@ -16,3 +16,9 @@
     - { src: "zshrc", dest: ".zshrc" }
     - { src: "kitty.conf", dest: ".config/kitty/kitty.conf" }
     - { src: "mpv.conf", dest: ".config/mpv/mpv.conf" }
+
+- name: System | Post-tasks | Clear local package cache
+  become: true
+  ansible.builtin.apt:
+    clean: true
+  when: ansible_facts['distribution'] == "Debian"
