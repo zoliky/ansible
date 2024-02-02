@@ -51,6 +51,7 @@
     - ansible.builtin.import_tasks: software/skype.yml
     - ansible.builtin.import_tasks: software/teamviewer.yml
     - ansible.builtin.import_tasks: software/telegram.yml
+    - ansible.builtin.import_tasks: software/texlive.yml
     - ansible.builtin.import_tasks: software/thunderbird.yml
     - ansible.builtin.import_tasks: software/transmission.yml
     - ansible.builtin.import_tasks: software/vice.yml
