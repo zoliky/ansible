@@ -1,0 +1,5 @@
+- name: Software | TeXstudio
+  become: true
+  ansible.builtin.package:
+    name: texstudio
+    state: present
