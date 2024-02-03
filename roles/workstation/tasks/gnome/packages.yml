@@ -8,6 +8,12 @@
     state: present
   when: ansible_facts['distribution'] == "Debian"
 
+- name: GNOME | Packages | Install GNOME Screenshot
+  become: true
+  ansible.builtin.package:
+    name: gnome-screenshot
+    state: present
+
 - name: GNOME | Packages | Install selected games
   become: true
   ansible.builtin.package:
