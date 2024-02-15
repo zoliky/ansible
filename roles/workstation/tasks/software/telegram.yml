@@ -1,5 +1,5 @@
 - name: Software | Telegram
-  community.general.flatpak:
-    name: org.telegram.desktop
-    method: user
+  become: true
+  ansible.builtin.package:
+    name: telegram-desktop
     state: present
