@@ -4,3 +4,12 @@
     name: telegram-desktop
     state: present
   when: ansible_facts['distribution'] == "Fedora"
+
+- name: Software | Debian | Telegram
+  become: true
+  ansible.builtin.apt:
+    name: telegram-desktop
+    state: present
+    default_release: bookworm-backports
+    update_cache: true
+  when: ansible_facts['distribution'] == "Debian"
