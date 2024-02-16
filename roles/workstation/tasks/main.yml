@@ -40,6 +40,7 @@
     - ansible.builtin.import_tasks: software/filezilla.yml
     - ansible.builtin.import_tasks: software/flacon.yml
     - ansible.builtin.import_tasks: software/flatseal.yml
+    - ansible.builtin.import_tasks: software/foliate.yml
     - ansible.builtin.import_tasks: software/gimp.yml
     - ansible.builtin.import_tasks: software/inkscape.yml
     - ansible.builtin.import_tasks: software/kdenlive.yml
