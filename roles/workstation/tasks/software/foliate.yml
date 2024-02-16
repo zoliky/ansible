@@ -1,0 +1,5 @@
+- name: Software | Foliate
+  become: true
+  ansible.builtin.package:
+    name: foliate
+    state: present
