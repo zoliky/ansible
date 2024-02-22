@@ -10,6 +10,7 @@
     - ansible.builtin.include_tasks: system/keyboard.yml
     - ansible.builtin.include_tasks: system/services.yml
     - ansible.builtin.include_tasks: system/codecs.yml
+    - ansible.builtin.include_tasks: system/sleep.yml
     - ansible.builtin.include_tasks: system/zsh.yml
     - ansible.builtin.include_tasks: system/fonts.yml
     - ansible.builtin.include_tasks: system/wacom.yml
