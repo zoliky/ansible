@@ -3,11 +3,6 @@
     key: "/org/gnome/desktop/input-sources/sources"
     value: "[('xkb', 'us'), ('xkb', 'hu'), ('xkb', 'ro+std')]"
 
-- name: GNOME | Keyboard | Add XKB options
-  community.general.dconf:
-    key: "/org/gnome/desktop/input-sources/xkb-options"
-    value: "['altwin:swap_lalt_lwin', 'caps:ctrl_modifier']"
-
 - name: GNOME | Keyboard | Map Super_R to Activities Overview
   community.general.dconf:
     key: "/org/gnome/mutter/overlay-key"
