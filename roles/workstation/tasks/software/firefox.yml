@@ -1,0 +1,22 @@
+- name: Software | Firefox | Debian | Add repository key
+  become: true
+  ansible.builtin.get_url:
+    url: https://packages.mozilla.org/apt/repo-signing-key.gpg
+    dest: /etc/apt/keyrings/packages.mozilla.org.asc
+    mode: '0644'
+  when: ansible_facts['distribution'] == "Debian"
+
+- name: Software | Firefox | Debian | Add repository
+  become: true
+  ansible.builtin.apt_repository:
+    repo: deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main
+    state: present
+    filename: mozilla
+  when: ansible_facts['distribution'] == "Debian"
+
+- name: Software | Firefox | Install Firefox
+  become: true
+  ansible.builtin.package:
+    name: firefox
+    state: present
+  when: ansible_facts['distribution'] == "Debian"
