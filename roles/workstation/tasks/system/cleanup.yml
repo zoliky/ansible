@@ -3,6 +3,7 @@
   ansible.builtin.apt:
     name:
       - cheese
+      - firefox-esr
       - gnome-games
       - gnome-music
       - gnome-sound-recorder
