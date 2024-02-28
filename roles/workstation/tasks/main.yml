@@ -39,6 +39,7 @@
     - ansible.builtin.import_tasks: software/dropbox.yml
     - ansible.builtin.import_tasks: software/emacs.yml
     - ansible.builtin.import_tasks: software/filezilla.yml
+    - ansible.builtin.import_tasks: software/firefox.yml
     - ansible.builtin.import_tasks: software/flacon.yml
     - ansible.builtin.import_tasks: software/flatseal.yml
     - ansible.builtin.import_tasks: software/foliate.yml
