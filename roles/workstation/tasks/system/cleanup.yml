@@ -7,6 +7,7 @@
       - gnome-games
       - gnome-music
       - gnome-sound-recorder
+      - xserver-xorg-video-intel
     purge: true
     autoremove: true
     state: absent
